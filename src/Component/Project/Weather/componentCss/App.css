@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: 0%;
+  user-select: none;
+  background-image: url("../bgg.jpg");
+  background-size: cover;
+  ::placeholder { 
+    color:    black;
+ }
+}
+@media screen and (max-width:320px) {
+  .container{
+    width: 100dvw;
+    height: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container{
+    width: auto;
+    height: 99.9dvh;
+  }
+  .containerMiddle {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: row;
+    width: 90%;
+    height: 100%;
+  }
+  .container .animationLoadingCss {
+    margin: 0px auto;
+  }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container{
+    width: auto;
+    height: 99.9dvh;
+  }
+  .containerMiddle {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: row;
+    width: 90%;
+    height: 100%;
+  }
+}
+
+/* Laptop/Desktop Styles */
+@media screen and (min-width: 1024px) {
+  .container{
+    width: auto;
+    height: 99.9dvh;
+  }
+  .containerMiddle {
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction: row;
+    width: 50%;
+    height: 100%;
+  }
+  .container .animationLoadingCss {
+    width: 40%;
+  }
+}

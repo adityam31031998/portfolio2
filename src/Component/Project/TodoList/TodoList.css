@@ -1,0 +1,124 @@
+
+  
+  .outer-shadow {
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+
+  
+  .centered-items {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 25%;
+    left: 38%;
+    outline: none;
+  }
+
+  .bgi {
+    display: flex;
+    width: 82dvw;
+    height: 50dvh;
+    object-fit: fill;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: 100% 150%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./mm.jpg");
+    opacity: 0.8;
+  }
+  
+  .titles {
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    bottom: 100%;
+    left: 30%;
+    font-size: 8vh;
+    color: black;
+    margin: auto;
+    justify-content: center;
+  }
+  
+  .inputStyle {
+    border-radius: 1%;
+    outline: none;
+    color: white;
+    width: 290%;
+    background-color: rgb(255, 255, 255);
+    font-size: 15px;
+    height: 56px;
+    border: 6px solid yellow;
+  }
+  
+  
+  .inputStyle:hover {
+    outline: none;
+    color: white;
+    border: none;
+  }
+  
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+  }
+  
+  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border: none;
+    color: white;
+    outline: none;
+  }
+  
+  .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    color: white;
+    border: none !important;
+  }
+  
+  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    color: white;
+    box-shadow: none !important;
+  }
+  
+  .outer-shadow {
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+    color: white;
+    border-radius: 40px;
+  }
+  
+  /* .details {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 50;
+  
+  } */
+  
+  
+  /* body {
+    margin: 0;
+    padding: 0;
+    background-color: #F6F4F4;
+  }
+  
+  .bgimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+    width: 100vw;
+    background-image: url("../public/mm.jpg");
+    opacity: 0.8;
+  }
+  
+  .App {
+    height: 1080px;
+    width: auto;
+    position: relative;
+  }
+  */
