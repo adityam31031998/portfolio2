@@ -1,4 +1,4 @@
-import { Zoom, Fab } from "@material-ui/core";
+// import { Zoom, Fab } from "@material-ui/core";
 // import AddIcon from "@material-ui/icons/Add";
 import React, { useState } from "react";
 import "./GoogleNotes.css";
@@ -44,11 +44,11 @@ const CreateArea = ({addNotes}) => {
           rows={isExpend ? 3 : 1}
           onClick={expand}
         />
-        <Zoom in={isExpend}>
+        <div in={isExpend}>
           <div onClick={handleSubmit}>
             Add
           </div>
-        </Zoom>
+        </div>
       </form>
     </div>
   );

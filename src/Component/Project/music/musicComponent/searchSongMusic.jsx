@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../music.module.css";
 import { searchUrlCollect } from "../musicApi";
-import { BsArrowLeftShort } from "react-icons/bs";
-import { BsArrowRightShort } from "react-icons/bs";
-import { FaPlay } from "react-icons/fa";
-import { FaPause } from "react-icons/fa";
+// import { BsArrowLeftShort } from "react-icons/bs";
+// import { BsArrowRightShort } from "react-icons/bs";
+// import { FaPlay } from "react-icons/fa";
+// import { FaPause } from "react-icons/fa";
 // import TmpRecentPlay from "./tmpRecentPlay";
 import { useMusicContext } from "./MusicContext"; // Added import
 import searchImg from "./music/search.png"
@@ -132,12 +132,12 @@ const SearchSongMusic = ({ accessToken }) => {
                       preload="metadata"
                     ></audio>
                     <button>
-                      back <BsArrowLeftShort />
+                      back 
                     </button>
                     <button onClick={handleControlss}>
-                      {isplaying ? <FaPlay /> : <FaPause />}
+                      {/* {isplaying ?  : } */}
                     </button>
-                    <button>forword <BsArrowRightShort /></button>
+                    <button>forword </button>
                     <div>00:00</div>
                     <div>
                       {/* <input type="range" /> */}
