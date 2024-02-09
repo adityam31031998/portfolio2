@@ -135,7 +135,7 @@ const SearchSongMusic = ({ accessToken }) => {
                       back 
                     </button>
                     <button onClick={handleControlss}>
-                      {/* {isplaying ?  : } */}
+                      {/* {isplaying ? <FaPlay /> : <FaPause />} */}
                     </button>
                     <button>forword </button>
                     <div>00:00</div>
