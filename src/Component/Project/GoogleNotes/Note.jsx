@@ -1,4 +1,4 @@
-import { Delete } from '@material-ui/icons'
+// import { Delete } from '@material-ui/icons'
 import React from 'react'
 
 const Note = ({title,content,handleDelete,id}) => {
@@ -6,7 +6,7 @@ const Note = ({title,content,handleDelete,id}) => {
     <div className='note'>
         <h1>{title}</h1>
         <p>{content}</p>
-        <button onClick={()=>handleDelete(id)}><Delete  /></button>
+        <button onClick={()=>handleDelete(id)}>Delete</button>
     </div>
   )
 }
