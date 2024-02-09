@@ -20,7 +20,6 @@ const App = () => {
   };
 
   const handleLinkClick = () => {
-    // Close the sidebar when a link is clicked
     setSidebarActive(false);
   };
 
