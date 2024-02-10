@@ -1,124 +1,158 @@
+.todoContainer {
+  background-color: #e9ae66;
+  width: 82dvw;
+  height: 100dvh;
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+  justify-content: center;
+  align-content: center;
+}
+.containerCenter {
+  width: 50dvw;
+  height: 80dvh;
+  background: white;
+  border-radius: 30px;
+}
+.titleWrap {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+}
+.title {
+  width: 60%;
+  text-align: center;
+  height: 20%;
+}
+.dates {
+  width: 40%;
+  height: 50%;
+}
+.currentDate {
+  border-radius: 10px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #b4c9d7;
+}
+.morningContainer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.morningList {
+  width: 30%;
+  height: 100%;
+}
+.morningIteml {
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  height: 55%;
+}
+.morningalign {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 27%;
+  align-items: center;
+  justify-content: space-around;
+}
+.meditationcss {
+  width: 4cap;
+  height: 90%;
+}
+.water {
+  margin-top: 5%;
+  border-radius: 10px;
 
-  
-  .outer-shadow {
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
-  }
-  
+  border: 2px solid black;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+}
+.glass {
+  width: 20%;
+}
+.todolists {
+  width: 70%;
+  height: 100%;
+}
 
-  
-  .centered-items {
-    position: absolute;
-    height: 100%;
-    width: auto;
-    top: 25%;
-    left: 38%;
-    outline: none;
-  }
+.todoItem {
+  overflow: scroll;
+  width: 100%;
+  height: 70%;
+}
+.todolists p {
+  padding-top: 2%;
+  margin-left: 10%;
+}
+.todolistalign {
+  padding: 5%;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.todolistinput {
+  width: 70%;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px dotted black;
+}
+.hoursleep {
+  width: 100%;
+  height: 30%;
+  background-color: rgb(192, 234, 108);
+}
 
-  .bgi {
-    display: flex;
-    width: 82dvw;
-    height: 50dvh;
-    object-fit: fill;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-size: 100% 150%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("./mm.jpg");
-    opacity: 0.8;
-  }
-  
-  .titles {
-    width: 100%;
-    padding: 10px;
-    position: absolute;
-    bottom: 100%;
-    left: 30%;
-    font-size: 8vh;
-    color: black;
-    margin: auto;
-    justify-content: center;
-  }
-  
-  .inputStyle {
-    border-radius: 1%;
-    outline: none;
-    color: white;
-    width: 290%;
-    background-color: rgb(255, 255, 255);
-    font-size: 15px;
-    height: 56px;
-    border: 6px solid yellow;
-  }
-  
-  
-  .inputStyle:hover {
-    outline: none;
-    color: white;
-    border: none;
-  }
-  
-  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-    border: none;
-    outline: none;
-    box-shadow: none;
-    color: white;
-  }
-  
-  .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
-    border: none;
-    color: white;
-    outline: none;
-  }
-  
-  .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
-    color: white;
-    border: none !important;
-  }
-  
-  .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-    color: white;
-    box-shadow: none !important;
-  }
-  
-  .outer-shadow {
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
-    color: white;
-    border-radius: 40px;
-  }
-  
-  /* .details {
-    display: inline-block;
-    margin: 10px;
-    border-radius: 50;
-  
-  } */
-  
-  
-  /* body {
-    margin: 0;
-    padding: 0;
-    background-color: #F6F4F4;
-  }
-  
-  .bgimage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 40vh;
-    width: 100vw;
-    background-image: url("../public/mm.jpg");
-    opacity: 0.8;
-  }
-  
-  .App {
-    height: 1080px;
-    width: auto;
-    position: relative;
-  }
-  */
+.thingsContainer {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.thingsList {
+  width: 30%;
+  height: 100%;
+}
+.thingsItem {
+  width: 100%;
+  height: 50%;
+}
+.positve {
+  background-color: wheat;
+  width: 100%;
+  height: 50%;
+}
+.mood {
+  width: 70%;
+  height: 100%;
+  background-color: green;
+}
+.moodList {
+  width: 100%;
+  height: 30%;
+  background-color: yellow;
+}
+
+.starts {
+  width: 10%;
+  margin-right: 2%;
+}
+.starts:hover {
+  width: 10%;
+  margin-right: 2%;
+  background-color: yellow;
+}
