@@ -1,158 +1,333 @@
-.todoContainer {
-  background-color: #e9ae66;
-  width: 82dvw;
-  height: 100dvh;
-  display: flex;
-  flex-wrap: wrap;
-  color: black;
-  justify-content: center;
-  align-content: center;
-}
-.containerCenter {
-  width: 50dvw;
-  height: 80dvh;
-  background: white;
-  border-radius: 30px;
-}
-.titleWrap {
-  height: 20%;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  /* align-items: center; */
-}
-.title {
-  width: 60%;
-  text-align: center;
-  height: 20%;
-}
-.dates {
-  width: 40%;
-  height: 50%;
-}
-.currentDate {
-  border-radius: 10px;
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: #b4c9d7;
-}
-.morningContainer {
-  width: 100%;
-  height: 50%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.morningList {
-  width: 30%;
-  height: 100%;
-}
-.morningIteml {
-  text-align: center;
-  border-radius: 10px;
-  border: 2px solid black;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: 100%;
-  height: 55%;
-}
-.morningalign {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 27%;
-  align-items: center;
-  justify-content: space-around;
-}
-.meditationcss {
-  width: 4cap;
-  height: 90%;
-}
-.water {
-  margin-top: 5%;
-  border-radius: 10px;
+@media screen and (max-width: 400px) {
+  .todoContainer {
+    background-color: #e9ae66;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    justify-content: center;
+    align-content: center;
+  }
+  .containerCenter {
+    overflow: scroll;
+    margin-top: 10%;
+    width: 90dvw;
+    height: 80dvh;
+    background: white;
+    border-radius: 30px;
+  }
+  .titleWrap {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+  }
+  .title {
+    width: 60%;
+    text-align: center;
+    height: 20%;
+  }
+  .dates {
+    width: 40%;
+    height: 50%;
+  }
+  .currentDate {
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #b4c9d7;
+  }
+  .morningContainer {
+    justify-content: center;
+    padding-left: 2%;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .morningList {
+    width: 60%;
+    height: 100%;
+  }
+  .morningIteml {
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 55%;
+  }
+  .morningalign {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 27%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .meditationcss {
+    width: 4cap;
+    height: 90%;
+  }
+  .water {
+    margin-top: 5%;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-content: space-around;
+  }
+  .water p {
+    width: 100%;
+  }
+  .glass {
+    width: 20%;
+  }
+  .glass:active {
+    width: 20%;
+    background-image: url("./water.png");
+  }
+  .todolists {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
 
-  border: 2px solid black;
-  width: 100%;
-  height: 50%;
-  text-align: center;
-}
-.glass {
-  width: 20%;
-}
-.todolists {
-  width: 70%;
-  height: 100%;
-}
+  .todoItem {
+    overflow: scroll;
+    width: 100%;
+    height: 70%;
+  }
+  .todolists p {
+    padding-top: 2%;
+    margin-left: 10%;
+  }
+  .todolistalign {
+    padding: 5%;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .todolistinput {
+    width: 70%;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px dotted black;
+  }
+  .hoursleep {
+    width: 100%;
+    height: 30%;
+  }
 
-.todoItem {
-  overflow: scroll;
-  width: 100%;
-  height: 70%;
-}
-.todolists p {
-  padding-top: 2%;
-  margin-left: 10%;
-}
-.todolistalign {
-  padding: 5%;
-  width: 100%;
-  height: 10%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.todolistinput {
-  width: 70%;
-  background: none;
-  outline: none;
-  border: none;
-  border-bottom: 2px dotted black;
-}
-.hoursleep {
-  width: 100%;
-  height: 30%;
-  background-color: rgb(192, 234, 108);
-}
+  .thingsContainer {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .thingsList {
+    width: 30%;
+    height: 100%;
+  }
+  .thingsItem {
+    width: 100%;
+    height: 50%;
+  }
+  .positve {
+    width: 100%;
+    height: 50%;
+  }
+  .mood {
+    width: 70%;
+    height: 100%;
+  }
+  .moodList {
+    width: 100%;
+    height: 30%;
+  }
 
-.thingsContainer {
-  width: 100%;
-  height: 30%;
-  display: flex;
-  flex-wrap: wrap;
+  .starts {
+    width: 10%;
+    margin-right: 2%;
+  }
+  .starts:hover {
+    background-color: yellow;
+    width: 10%;
+    margin-right: 2%;
+  }
 }
-.thingsList {
-  width: 30%;
-  height: 100%;
-}
-.thingsItem {
-  width: 100%;
-  height: 50%;
-}
-.positve {
-  background-color: wheat;
-  width: 100%;
-  height: 50%;
-}
-.mood {
-  width: 70%;
-  height: 100%;
-  background-color: green;
-}
-.moodList {
-  width: 100%;
-  height: 30%;
-  background-color: yellow;
-}
+@media screen and(width:1020px) {
+  .todoContainer {
+    background-color: #e9ae66;
+    width: 82dvw;
+    height: 100dvh;
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    justify-content: center;
+    align-content: center;
+  }
+  .containerCenter {
+    width: 50dvw;
+    height: 80dvh;
+    background: white;
+    border-radius: 30px;
+  }
+  .titleWrap {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center; */
+  }
+  .title {
+    width: 60%;
+    text-align: center;
+    height: 20%;
+  }
+  .dates {
+    width: 40%;
+    height: 50%;
+  }
+  .currentDate {
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #b4c9d7;
+  }
+  .morningContainer {
+    padding-left: 2%;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .morningList {
+    width: 30%;
+    height: 100%;
+  }
+  .morningIteml {
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 55%;
+  }
+  .morningalign {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 27%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .meditationcss {
+    width: 4cap;
+    height: 90%;
+  }
+  .water {
+    margin-top: 5%;
+    border-radius: 10px;
 
-.starts {
-  width: 10%;
-  margin-right: 2%;
-}
-.starts:hover {
-  width: 10%;
-  margin-right: 2%;
-  background-color: yellow;
+    border: 2px solid black;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+  }
+  .glass {
+    width: 20%;
+  }
+  .glass:active {
+    width: 20%;
+    background-image: url("./water.png");
+  }
+  .todolists {
+    width: 70%;
+    height: 100%;
+  }
+
+  .todoItem {
+    overflow: scroll;
+    width: 100%;
+    height: 70%;
+  }
+  .todolists p {
+    padding-top: 2%;
+    margin-left: 10%;
+  }
+  .todolistalign {
+    padding: 5%;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .todolistinput {
+    width: 70%;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px dotted black;
+  }
+  .hoursleep {
+    width: 100%;
+    height: 30%;
+  }
+
+  .thingsContainer {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .thingsList {
+    width: 30%;
+    height: 100%;
+  }
+  .thingsItem {
+    width: 100%;
+    height: 50%;
+  }
+  .positve {
+    width: 100%;
+    height: 50%;
+  }
+  .mood {
+    width: 70%;
+    height: 100%;
+  }
+  .moodList {
+    width: 100%;
+    height: 30%;
+  }
+
+  .starts {
+    width: 10%;
+    margin-right: 2%;
+  }
+  .starts:hover {
+    background-color: yellow;
+    width: 10%;
+    margin-right: 2%;
+  }
 }
