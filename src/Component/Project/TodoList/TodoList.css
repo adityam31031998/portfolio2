@@ -90,7 +90,10 @@
     width: 100%;
   }
   .glass {
+<<<<<<< HEAD
     transition: background-color 6s ease;
+=======
+>>>>>>> 332daff1378fa4358ce441fd7a1d45f88243c95b
     width: 20%;
   }
   .glass:active {
@@ -171,7 +174,11 @@
     margin-right: 2%;
   }
 }
+<<<<<<< HEAD
 @media screen and (min-width: 768px) and (max-width: 9023px) {
+=======
+@media screen and(width:1020px) {
+>>>>>>> 332daff1378fa4358ce441fd7a1d45f88243c95b
   .todoContainer {
     background-color: #e9ae66;
     width: 82dvw;
@@ -326,4 +333,12 @@
     width: 10%;
     margin-right: 2%;
   }
+<<<<<<< HEAD
+=======
+  .starts:hover {
+    background-color: yellow;
+    width: 10%;
+    margin-right: 2%;
+  }
+>>>>>>> 332daff1378fa4358ce441fd7a1d45f88243c95b
 }
