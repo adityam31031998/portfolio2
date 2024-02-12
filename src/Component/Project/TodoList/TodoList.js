@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import "./TodoList.css";
 import star from "./star.png";
@@ -38,16 +37,6 @@ const TodoList = () => {
     newStarsActive[index] = !newStarsActive[index];
     setStarsActive(newStarsActive);
   };
-=======
-import React from "react";
-import "./TodoList.css";
-import start from "./star.png";
-import meditationimg from "./meditation.png";
-import breakfast from "./breakfast.png";
-import vitamins from "./vitamins.png";
-import glass from "./glass.png";
-const TodoList = () => {
->>>>>>> 332daff1378fa4358ce441fd7a1d45f88243c95b
   const date = new Date();
   return (
     <div className="todoContainer">
@@ -59,7 +48,6 @@ const TodoList = () => {
             <div>
               Productivity
               <br />
-<<<<<<< HEAD
               {starsActive.map((active, index) => (
                 <img
                   key={index}
@@ -69,13 +57,6 @@ const TodoList = () => {
                   src={active ? starActiveImage : star}
                 />
               ))}
-=======
-              <img src={start} alt="loading" className="starts" />
-              <img src={start} alt="loading" className="starts" />
-              <img src={start} alt="loading" className="starts" />
-              <img src={start} alt="loading" className="starts" />
-              <img src={start} alt="loading" className="starts" />
->>>>>>> 332daff1378fa4358ce441fd7a1d45f88243c95b
             </div>
           </div>
         </div>
@@ -105,7 +86,6 @@ const TodoList = () => {
             </div>
             <div className="water">
               <p>Water Balance</p>
-<<<<<<< HEAD
               {waterActive.map((active, index) => (
                 <img
                   key={index}
@@ -115,18 +95,6 @@ const TodoList = () => {
                   onClick={() => toggleWaterActive(index)}
                 />
               ))}
-=======
-              <img src={glass} alt="" className="glass" />
-              <img src={glass} alt="" className="glass" />
-              <img src={glass} alt="" className="glass" />
-              <img src={glass} alt="" className="glass" />
-              <img src={glass} alt="" className="glass" />
-              <img src={glass} alt="" className="glass" />
-              <img src={glass} alt="" className="glass" />
-              <img src={glass} alt="" className="glass" />
-              <img src={glass} alt="" className="glass" />
-              <img src={glass} alt="" className="glass" />
->>>>>>> 332daff1378fa4358ce441fd7a1d45f88243c95b
             </div>
           </div>
           <div className="todolists">

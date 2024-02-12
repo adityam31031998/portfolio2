@@ -201,11 +201,9 @@ body {
     width: 100%;
     height: 100vh;
     /* background-color: #ddde7a; */
-<<<<<<< HEAD
-    background-image: url("/public/ed.gif");
-=======
+
     background-image: url("/public/bgi6.gif");
->>>>>>> 332daff1378fa4358ce441fd7a1d45f88243c95b
+
     background-size: cover;
     transition: background-color 0.3s;
   }
