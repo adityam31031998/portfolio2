@@ -1,0 +1,79 @@
+.aboutContainer {
+  overflow: scroll;
+  background-color: rgb(28, 28, 26);
+  width: 100%;
+  height: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.fontColor {
+  color: #00a3e0;
+}
+
+u {
+  border-bottom: 1px solid yellow;
+}
+
+.resumeDownload {
+  color: azure;
+  padding: 3%;
+  font-size: 18px;
+  background: transparent;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 3px 3px white;
+}
+
+.resumeDownload:hover {
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 3px white;
+  padding: 3%;
+  background: #00a3e0;
+}
+
+.aboutHeading {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 2px dotted white;
+  height: 15%;
+}
+
+.aboutPara {
+  font-family: cursive;
+  padding: 3%;
+  font-size: 115%;
+  font-style: italic;
+  text-align: justify;
+}
+
+.aboutParaInfo {
+  font-family: cursive;
+  padding: 1%;
+  font-size: 110%;
+  text-align: justify;
+}
+
+.aboutServices {
+  width: 20%;
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  position: relative;
+  align-items: center;
+  align-content: baseline;
+  justify-content: center;
+  /* background-color: #00a3e0; */
+  height: 300px;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  display: inline-block;
+}
