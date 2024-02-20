@@ -23,7 +23,7 @@ const Temperature = ({
         {temperDate?.daily?.map((date, index) => (
           <div
             onClick={() => hanldeSelectedTemp(date)}
-            className="currentDate"
+            className="weatherCurrentDate"
             key={index}
           >
             {new Date(date.dt * 1000).toLocaleDateString(undefined, {

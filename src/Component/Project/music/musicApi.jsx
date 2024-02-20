@@ -1,4 +1,3 @@
-// musicApi.jsx
 import axios from "axios";
 import {
   albumPoint,
@@ -6,6 +5,7 @@ import {
   CLIENT_SECRET,
   searchApi,
   categoriesApi,
+  allRadio,
   artistAlbumApi,
 } from "./musicUrl";
 function CreatedMusicAuth(accessToken) {
@@ -16,7 +16,20 @@ function CreatedMusicAuth(accessToken) {
     },
   };
 }
+function radio() {
+  return {
+    headers: {
+      "X-RapidAPI-Key": "b5e27c2640msh1e59a6758d4f99cp1d1a2ejsn723d16d2925f",
+      // "X-RapidAPI-Key": " 4ba783b254msh168a992bf5db3efp1cfe83jsnb565a9fd8537",
 
+      "X-RapidAPI-Host": "bando-radio-api.p.rapidapi.com",
+    },
+    params: {
+      offset: "0",
+      limit: "40",
+    },
+  };
+}
 async function generateToken(setAccessToken) {
   try {
     const authParameters = {
@@ -52,6 +65,16 @@ const fetchAlbumData = async (accessToken, setAlbum) => {
     );
   }
 };
+const fetchRadio = async (setApiRadio) => {
+  try {
+    const radioAuth = radio(); // Call the radio function to get authentication data
+    const response = await axios.get(allRadio, radioAuth); // Send a GET request to the allRadio URL with authentication headers
+    setApiRadio(response.data); // Set the state with the fetched data
+  } catch (error) {
+    // If there's an error during the request or processing
+    console.log(error.message, "dddf"); // Log the error message to the console
+  }
+};
 
 const searchUrlCollect = async (
   userSearch,
@@ -65,15 +88,22 @@ const searchUrlCollect = async (
       const searchHeader = CreatedMusicAuth(accessToken);
       const searchUrl = `${searchApi}/search?q=${userSearch}&type=album`;
       const response = await axios.get(searchUrl, searchHeader);
+
       if (setSearchResults) {
         setSearchResults(response.data);
       }
       var ress = searchSelectdApi.href;
+
       var serachSelectedSongApi = await axios.get(ress, searchHeader);
       // console.log(serachSelectedSongApi.data.tracks.items[0]);
+
       setSelectCurentSong(
-        serachSelectedSongApi.data.tracks.items[0].preview_url
+        serachSelectedSongApi?.data?.tracks.items[0].preview_url
       );
+      // console.log(
+      //   serachSelectedSongApi?.data?.tracks?.items[0]?.preview_url,
+      //   "rrrrrrrrrrrr"
+      // );
     }
   } catch (error) {
     console.error("Error collecting search URL:", error.message);
@@ -95,12 +125,12 @@ const categoriesMusic = async (accessToken, setCategoryResponse) => {
   }
 };
 
-const artistAlbumFetch = async (accessToken,setArtist) => {
+const artistAlbumFetch = async (accessToken, setArtist) => {
   try {
     const artistHearder = CreatedMusicAuth(accessToken);
     const artistResponse = await axios.get(artistAlbumApi, artistHearder);
     if (artistResponse.data) {
-      setArtist(artistResponse.data)
+      setArtist(artistResponse.data);
     }
   } catch (error) {
     console.log("Error message :", error.message);
@@ -113,4 +143,5 @@ export {
   searchUrlCollect,
   categoriesMusic,
   artistAlbumFetch,
+  fetchRadio,
 };

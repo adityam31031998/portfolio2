@@ -8,7 +8,6 @@ const SearchLocation = ({
   setlocationResponse,
   setTemperDate,
 }) => {
-
   let api_key = "9d81b01f5cf402f40b5e8ffd43a48762";
   let indiaLatitude;
   let indialongitude;
@@ -33,7 +32,6 @@ const SearchLocation = ({
     }
   }, [getLocation, setlocationResponse, setTemperDate]);
   const handleInput = async (e) => {
-
     if (e !== "") {
       // let searchInput = await fetch(
       //   // `http://api.openweathermap.org/geo/1.0/direct?q=${e},"IN"&limit=5&appid=${api_key}`
@@ -59,7 +57,7 @@ const SearchLocation = ({
     }
   };
   return (
-    <div className="searchBox">
+    <div className="weatherSearchBox">
       <div className="controlSearchBox">
         <div className="iconInput">
           <img
@@ -70,7 +68,6 @@ const SearchLocation = ({
           <input
             className="searchInput"
             onChange={(e) => handleInput(e.target.value)}
-         
             type="text"
             placeholder="Enter Cities Name"
           />
