@@ -6,6 +6,7 @@ import Album from "./musicComponent/Albums/Album";
 import SearchSongMusic from "./musicComponent/SeachSongMusic/searchSongMusic";
 import Music from "./musicComponent/Music/Music";
 import {
+  artistAlbumFetch,
   fetchAlbumData,
   fetchRadio,
   generateToken,
@@ -16,6 +17,8 @@ const MusicMain = () => {
   const [apiRadio, setApiRadio] = useState();
   const [album, setAlbum] = useState();
   const [audio, setAudio] = useState();
+  const [artist, setArtist] = useState();
+  const [selectedArtist, setSelectedArtist] = useState();
 
   useEffect(() => {
     if (!accessToken) {
@@ -24,6 +27,7 @@ const MusicMain = () => {
       fetchRadio(setApiRadio);
       fetchAlbumData(accessToken, setAlbum);
       searchUrlCollect("", accessToken);
+      artistAlbumFetch(accessToken, setArtist);
     }
   }, [accessToken]);
   return (
@@ -38,17 +42,20 @@ const MusicMain = () => {
               setApiRadio={setApiRadio}
               setAlbum={setAlbum}
               setAccessToken={setAccessToken}
+              setArtist={setArtist}
+              artist={artist}
+              setSelectedArtist={setSelectedArtist}
+              selectedArtist={selectedArtist}
             />
           }
         />
-
         <Route
           path="radio"
           element={
             <Radio apiRadio={apiRadio} setAudio={setAudio} audio={audio} />
           }
         />
-        {/* {console.log(album)} */}
+
         <Route path="album" element={<Album />} />
         <Route
           path="SearchSong"

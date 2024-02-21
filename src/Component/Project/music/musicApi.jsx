@@ -6,7 +6,7 @@ import {
   searchApi,
   categoriesApi,
   allRadio,
-  artistAlbumApi,
+  artistAlbumApiKey,
 } from "./musicUrl";
 function CreatedMusicAuth(accessToken) {
   return {
@@ -56,11 +56,25 @@ async function generateToken(setAccessToken) {
 const fetchAlbumData = async (accessToken, setAlbum) => {
   try {
     const authHeader = CreatedMusicAuth(accessToken);
-    const response = await axios.get(albumPoint, authHeader);
-    setAlbum(response.data);
+    const albumResponse = await axios.get(albumPoint, authHeader);
+
+    setAlbum(albumResponse.data);
   } catch (error) {
     console.error(
       "Error fetching album data:",
+      error.response ? error.response.data : error.message
+    );
+  }
+};
+const fetchArtistData = async (accessToken, setArtistKey, selectedArtist) => {
+  try {
+    const authHeader = CreatedMusicAuth(accessToken);
+    const artistResponse = await axios.get(selectedArtist?.href, authHeader);
+    console.log(artistResponse.data, "eeeeeee");
+    setArtistKey(artistResponse.data);
+  } catch (error) {
+    console.error(
+      "Error fetching artist data:",
       error.response ? error.response.data : error.message
     );
   }
@@ -128,7 +142,8 @@ const categoriesMusic = async (accessToken, setCategoryResponse) => {
 const artistAlbumFetch = async (accessToken, setArtist) => {
   try {
     const artistHearder = CreatedMusicAuth(accessToken);
-    const artistResponse = await axios.get(artistAlbumApi, artistHearder);
+    const artistResponse = await axios.get(artistAlbumApiKey, artistHearder);
+
     if (artistResponse.data) {
       setArtist(artistResponse.data);
     }
@@ -144,4 +159,5 @@ export {
   categoriesMusic,
   artistAlbumFetch,
   fetchRadio,
+  fetchArtistData,
 };

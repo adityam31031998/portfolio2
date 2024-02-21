@@ -8,8 +8,8 @@ const CLIENT_ID = "a1dc84ca845645a09b078e173ab2e927";
 const CLIENT_SECRET = "118ba62ef434431fade936d0ffba7f43";
 var searchApi = "https://api.spotify.com/v1";
 // var audioBookApi="https://api.spotify.com/v1/audiobooks/7iHfbu1YPACw6oZPAFJtqe"
-var artistAlbumApi =
-  "'https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/albums?limit=50'";
+var artistAlbumApiKey =
+  "https://api.spotify.com/v1/artists/0TnOYISbd1XYRBk9myaseg/albums?limit=50";
 var categoriesApi = "https://api.spotify.com/v1/browse/categories";
 var playListApi = "https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n";
 var allRadio = "https://bando-radio-api.p.rapidapi.com/stations";
@@ -19,7 +19,7 @@ export {
   CLIENT_SECRET,
   searchApi,
   categoriesApi,
-  artistAlbumApi,
+  artistAlbumApiKey,
   playListApi,
   allRadio,
 };
