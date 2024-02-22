@@ -75,7 +75,9 @@ const SearchSongMusic = ({ accessToken }) => {
       <div className={searchSongcss.musicSubContainer}>
         <div className={searchSongcss.musicLeft}>
           <div className={searchSongcss.musicTitle}>
-            <Link to="/portfolio/music">Back</Link>
+            <p>
+              <Link to="/portfolio/music">Back</Link>
+            </p>
             <div className={searchSongcss.musicCategory}></div>
           </div>
           <div className={searchSongcss.musicCenter}>
