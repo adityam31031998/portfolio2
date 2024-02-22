@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./control.css";
 import Marquee from "react-fast-marquee";
-
 import pause from "./pause.png";
 import play from "./play.png";
 import volumeSpeaker from "./speaker.png";
@@ -16,7 +15,7 @@ const AudioPlayer = ({
 }) => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [currentTime, setCurrentTime] = useState(0);
-  const [imageSong, setImageSong] = useState(null); // Initialize imageSong state with null
+  const [imageSong, setImageSong] = useState(null);
   const [volume, setVolume] = useState(1);
   const audioRef = useRef(null);
   const sliderRef = useRef(null);
@@ -35,26 +34,20 @@ const AudioPlayer = ({
     }
   };
 
-  const updateImageSong = () => {
-    // Clear previous value
-    setImageSong(null);
-
-    // Check conditions and set new value
-    if (selectedArtistSong) {
-      setImageSong(selectedArtist?.images[0]?.url);
-    } else if (selectedAlbum) {
-      setImageSong(albumimgs);
-    } else if (audio && audio.votes) {
-      setImageSong(audio.favicon);
-    } else if (audio && audio.total_tracks) {
-      setImageSong(audio?.images[0]?.url);
-    }
-  };
-
   useEffect(() => {
-    // {
-    //   console.log(selectedArtistSong, "selectedArtistSong");
-    // }
+    const updateImageSong = () => {
+      setImageSong(null);
+
+      if (selectedArtistSong) {
+        setImageSong(selectedArtist?.images[0]?.url);
+      } else if (selectedAlbum) {
+        setImageSong(albumimgs);
+      } else if (audio && audio.votes) {
+        setImageSong(audio.favicon);
+      } else if (audio && audio.total_tracks) {
+        setImageSong(audio?.images[0]?.url);
+      }
+    };
 
     updateImageSong();
   }, [audio, selectedAlbum, selectedArtistSong, selectedArtist]);
@@ -75,7 +68,8 @@ const AudioPlayer = ({
     return () => {
       audioElement.removeEventListener("timeupdate", handleTimeUpdate);
     };
-  }, [currentTime]); // Update the seek bar whenever currentTime changes
+  }, [currentTime]);
+
   const handleVolumeChange = () => {
     const newVolume = volumeRef.current.value;
     audioRef.current.volume = newVolume;
@@ -86,7 +80,6 @@ const AudioPlayer = ({
     <div className="audioControl">
       <div className="audioBody">
         <div className="audioImgPlay">
-          {/* Render imageSong if available */}
           {imageSong && (
             <img className="audioImgPlayapi" src={imageSong} alt="loading" />
           )}
@@ -94,7 +87,6 @@ const AudioPlayer = ({
         <div className="seekBar">
           {selectedArtistSong && (
             <>
-              {/* {(selectedAlbum = false)} */}
               <Marquee>
                 <b>Name:</b> {selectedArtistSong?.name}
                 <b>Type:</b> {selectedArtistSong?.type}
@@ -104,7 +96,6 @@ const AudioPlayer = ({
           )}
           {selectedAlbum && (
             <>
-              {/* {(selectedArtistSong = false)} */}
               <Marquee>
                 <p>
                   <b>Name:</b> {selectedAlbum?.name} <b>Type:</b>{" "}
