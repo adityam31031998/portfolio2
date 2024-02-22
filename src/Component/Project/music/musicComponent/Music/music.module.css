@@ -194,41 +194,27 @@
     border-radius: 10px;
     background-color: #1b1b2572;
   }
-  .songSearch {
-    width: 85%;
-    /* background-color: #1c1925; */
-    /* color: white;
-    height: 30%;
-    display: flex;
-    flex-wrap: wrap;
-    outline: none;
+  .searchMusic {
+    margin: 5px auto;
+    width: 15cap;
+    align-items: center;
     border-radius: 10px;
-    border: none;
-    font-size: 1rem;
-    text-align: center; */
-
-    display: flex;
-    flex-wrap: wrap;
-    height: 3cap;
-    outline: none;
-    border-radius: 10px;
-    border: none;
-    font-size: 1rem;
+    height: 2.5cap;
     background: transparent;
-
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.455);
+  }
+  .searchMusicInput {
     text-align: center;
+    width: 85%;
+    background: transparent;
+    border: none;
+    outline: none;
   }
-  .searchs input {
-    display: flex;
-    flex-wrap: wrap;
-    color: white;
-  }
-  .searchIcon {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 4px;
-    z-index: 1;
-    width: 2cap;
+  .img {
+    margin-left: 1%;
     height: 2cap;
+    width: 2cap;
   }
 }
