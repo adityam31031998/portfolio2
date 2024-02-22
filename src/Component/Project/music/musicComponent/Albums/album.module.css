@@ -1,6 +1,6 @@
 .albumContainer {
   width: 100%;
-  height: 40%;
+  height: 30%;
   display: flex;
   flex-wrap: wrap;
   overflow: scroll;
@@ -9,7 +9,7 @@
 .albumSubContainer {
   display: flex;
   flex-wrap: wrap;
-  width: 30%;
+  width: 20%;
   height: 100%;
   margin-left: 3%;
 }
