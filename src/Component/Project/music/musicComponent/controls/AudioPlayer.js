@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./control.css";
+import Marquee from "react-fast-marquee";
+
 import pause from "./pause.png";
 import play from "./play.png";
 import volumeSpeaker from "./speaker.png";
@@ -73,8 +75,7 @@ const AudioPlayer = ({
     return () => {
       audioElement.removeEventListener("timeupdate", handleTimeUpdate);
     };
-  }, []);
-
+  }, [currentTime]); // Update the seek bar whenever currentTime changes
   const handleVolumeChange = () => {
     const newVolume = volumeRef.current.value;
     audioRef.current.volume = newVolume;
@@ -94,28 +95,28 @@ const AudioPlayer = ({
           {selectedArtistSong && (
             <>
               {/* {(selectedAlbum = false)} */}
-              <marquee>
+              <Marquee>
                 <b>Name:</b> {selectedArtistSong?.name}
                 <b>Type:</b> {selectedArtistSong?.type}
-              </marquee>
+              </Marquee>
               <audio ref={audioRef} src={selectedArtistSong.preview_url} />
             </>
           )}
           {selectedAlbum && (
             <>
               {/* {(selectedArtistSong = false)} */}
-              <marquee>
+              <Marquee>
                 <p>
                   <b>Name:</b> {selectedAlbum?.name} <b>Type:</b>{" "}
                   {selectedAlbum?.type}
                 </p>
-              </marquee>
+              </Marquee>
               <audio ref={audioRef} src={selectedAlbum.preview_url} />
             </>
           )}
           {audio && audio?.votes && (
             <>
-              <marquee>
+              <Marquee>
                 <p>
                   <b>Name:</b> {audio.name} <b>Country:</b> {audio.country}{" "}
                   <b>Language:</b>{" "}
@@ -128,16 +129,16 @@ const AudioPlayer = ({
                     alt="loading"
                   />
                 )}
-              </marquee>
+              </Marquee>
               <audio ref={audioRef} src={audio.url_resolved} />
             </>
           )}
           {audio?.total_tracks && (
             <>
-              <marquee>
+              <Marquee>
                 <b>Name:</b> {audio?.name} <b>release_date:</b>{" "}
                 {audio?.release_date} <b>album:</b> {audio?.album_type}
-              </marquee>
+              </Marquee>
               <audio ref={audioRef} src={selectCurentSong} />
             </>
           )}

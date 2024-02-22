@@ -1,39 +1,89 @@
-.aartistContainer {
-  width: 100%;
-  height: 40%;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: scroll;
-  flex-direction: column;
-}
-.aartistSubContainer {
-  display: flex;
-  flex-wrap: wrap;
-  width: 20%;
-  height: 100%;
-  margin-left: 3%;
-}
-.aartistImg {
-  opacity: 10px;
-  width: 19.1cap;
-  position: relative;
-}
-.aartistImgcover {
-  display: block;
-  width: 100%;
-  background-color: black;
-  filter: opacity(40%);
+@media only screen and (max-width: 767px) {
+  .aartistContainer {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    flex-direction: column;
+  }
+  .aartistSubContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+    margin-left: 3%;
+  }
+  .aartistImg {
+    opacity: 10px;
+    width: 19.1cap;
+    position: relative;
+  }
+  .aartistImgcover {
+    display: block;
+    width: 100%;
+    background-color: black;
+    filter: opacity(40%);
+  }
+
+  .atextOverlay {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    color: white; /* Text color */
+    text-align: center;
+    font-size: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Adjust font size */
+  }
 }
 
-.atextOverlay {
-  width: 80%;
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  color: white; /* Text color */
-  text-align: center;
-  font-size: 17px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis; /* Adjust font size */
+/* Styles for devices with a minimum width of 768px and maximum width of 1023px (e.g., tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Tablet styles */
+}
+
+/* Styles for devices with a minimum width of 1024px (e.g., laptops and desktops) */
+@media only screen and (min-width: 1024px) {
+  .aartistContainer {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    flex-direction: column;
+  }
+  .aartistSubContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 100%;
+    margin-left: 3%;
+  }
+  .aartistImg {
+    opacity: 10px;
+    width: 19.1cap;
+    position: relative;
+  }
+  .aartistImgcover {
+    display: block;
+    width: 100%;
+    background-color: black;
+    filter: opacity(40%);
+  }
+
+  .atextOverlay {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    color: white; /* Text color */
+    text-align: center;
+    font-size: 17px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Adjust font size */
+  }
 }

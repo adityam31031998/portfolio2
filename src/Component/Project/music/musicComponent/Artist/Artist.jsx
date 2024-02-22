@@ -1,6 +1,5 @@
 import { useState } from "react";
 import artistCss from "./Artist.module.css";
-import artistimgs from "./atrist.jpeg";
 
 const Artist = ({
   artist,

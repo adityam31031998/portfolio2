@@ -25,16 +25,18 @@ const Music = ({
   const [selectedAlbum, setSelectedAlbum] = useState();
   useEffect(() => {
     fetchArtistData(accessToken, setArtistKey, selectedArtist);
-  }, [selectedArtist]);
+  }, [selectedArtist, accessToken]);
   return (
     <div className={music.musicContainer}>
       <div className={music.musicSubContainer}>
         <div className={music.musicLeft}>
           <div className={music.musicTitle}>
-            <Link to="/portfolio/music">MyMusic</Link>
-            <div className={music.musicCategory}>
-              <Link to="radio">Radio</Link>
-            </div>
+            <p>
+              <Link to="/portfolio/music">Home</Link>
+              <div className={music.musicCategory}>
+                <Link to="radio">Radio</Link>
+              </div>
+            </p>
           </div>
           <div className={music.musicCenter}>
             <div className={music.searchSongss}>
