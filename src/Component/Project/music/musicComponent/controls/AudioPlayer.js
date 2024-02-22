@@ -45,7 +45,7 @@ const AudioPlayer = ({
     } else if (audio && audio.votes) {
       setImageSong(audio.favicon);
     } else if (audio && audio.total_tracks) {
-      setImageSong(audio.images[0].url?.images[0]?.url);
+      setImageSong(audio?.images[0]?.url);
     }
   };
 
@@ -91,13 +91,12 @@ const AudioPlayer = ({
           )}
         </div>
         <div className="seekBar">
-          {/* {console.log(selectedAlbum, "selectedAlbum")} */}
           {selectedArtistSong && (
             <>
               {/* {(selectedAlbum = false)} */}
               <marquee>
-                <b>Name:</b> {selectedArtistSong.name}
-                <b>Type:</b> {selectedArtistSong.type}
+                <b>Name:</b> {selectedArtistSong?.name}
+                <b>Type:</b> {selectedArtistSong?.type}
               </marquee>
               <audio ref={audioRef} src={selectedArtistSong.preview_url} />
             </>
@@ -107,8 +106,8 @@ const AudioPlayer = ({
               {/* {(selectedArtistSong = false)} */}
               <marquee>
                 <p>
-                  <b>Name:</b> {selectedAlbum.name} <b>Type:</b>{" "}
-                  {selectedAlbum.type}
+                  <b>Name:</b> {selectedAlbum?.name} <b>Type:</b>{" "}
+                  {selectedAlbum?.type}
                 </p>
               </marquee>
               <audio ref={audioRef} src={selectedAlbum.preview_url} />
@@ -136,8 +135,8 @@ const AudioPlayer = ({
           {audio?.total_tracks && (
             <>
               <marquee>
-                <b>Name:</b> {audio.name} <b>release_date:</b>{" "}
-                {audio.release_date} <b>album:</b> {audio.album_type}
+                <b>Name:</b> {audio?.name} <b>release_date:</b>{" "}
+                {audio?.release_date} <b>album:</b> {audio?.album_type}
               </marquee>
               <audio ref={audioRef} src={selectCurentSong} />
             </>

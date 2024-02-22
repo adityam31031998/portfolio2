@@ -52,7 +52,6 @@ const MusicMain = () => {
             <Radio apiRadio={apiRadio} setAudio={setAudio} audio={audio} />
           }
         />
-        {/* {console.log(selectedArtist)} */}
         <Route path="album" element={<Album />} />
         <Route
           path="SearchSong"

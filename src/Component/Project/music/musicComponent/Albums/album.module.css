@@ -11,6 +11,7 @@
   flex-wrap: wrap;
   width: 30%;
   height: 100%;
+  margin-left: 3%;
 }
 .albumImg {
   opacity: 10px;

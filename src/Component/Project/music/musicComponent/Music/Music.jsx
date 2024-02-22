@@ -63,8 +63,6 @@ const Music = ({
             />
           </div>
           <div className={music.musicControl}>
-            {console.log(selectedArtistSong)}
-            {console.log(selectedAlbum)}
             {selectedArtistSong ? (
               <AudioPlayer
                 selectedArtistSong={selectedArtistSong}
