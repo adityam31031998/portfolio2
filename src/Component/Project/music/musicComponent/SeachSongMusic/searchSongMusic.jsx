@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-// import "./searchSong.css";
 import searchSongcss from "./search.module.css";
 import searchImg from "../musicIcons/search.png";
 import { searchUrlCollect } from "../../musicApi";
 import { Link } from "react-router-dom";
 import music from "./searchSong.module.css";
+import "../../comman.css";
+import homeImage from "../../musicComponent/musicIcons/home.png";
 import AudioPlayer from "../controls/AudioPlayer";
-// import AudioPlayer from "../controls/AudioPlayer";
 const SearchSongMusic = ({ accessToken }) => {
   const [searchData, setSearchData] = useState("");
   var [searchResults, setSearchResults] = useState([]);
@@ -75,8 +75,11 @@ const SearchSongMusic = ({ accessToken }) => {
       <div className={searchSongcss.musicSubContainer}>
         <div className={searchSongcss.musicLeft}>
           <div className={searchSongcss.musicTitle}>
-            <p>
-              <Link to="/portfolio/music">Back</Link>
+            <p className="label">
+              <Link className="subIcon" to="/portfolio/music">
+                <div className="musicCategory">Home</div>
+                <img alt="" className="radioIcon" src={homeImage} />
+              </Link>
             </p>
             <div className={searchSongcss.musicCategory}></div>
           </div>

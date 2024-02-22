@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import radioCss from "./radio.module.css";
 import noImg from "../../nomusic.jpg";
 import { Link } from "react-router-dom";
+import searchIoc from "../../musicComponent/musicIcons/search.png";
 import AudioPlayer from "../controls/AudioPlayer";
-
+import "../../comman.css";
+import homeImage from "../../musicComponent/musicIcons/home.png";
 const Radio = ({ apiRadio, setAudio, audio }) => {
   const itemsPerPage = 8;
   const [currentPage, setCurrentPage] = useState(1);
@@ -42,9 +44,22 @@ const Radio = ({ apiRadio, setAudio, audio }) => {
       <div className={radioCss.musicSubContainer}>
         <div className={radioCss.musicLeft}>
           <div className={radioCss.musicTitle}>
-            <Link to="/portfolio/music">MyMusic</Link>
+            <p className="label">
+              <Link className="subIcon" to="/portfolio/music">
+                <div className="musicCategory">Home</div>
+                <img alt="" className="radioIcon" src={homeImage} />
+              </Link>
+            </p>
           </div>
           <div className={radioCss.musicCenter}>
+            <div className={radioCss.searchRadio}>
+              <img alt="" src={searchIoc} className={radioCss.img} />
+              <input
+                type="text"
+                placeholder="SearchSong"
+                className={radioCss.searchRadioInput}
+              />
+            </div>
             <div className={radioCss.radioAudio}>
               <div className={radioCss.radioList}>
                 <div className={radioCss.radioListSize}>
