@@ -26,6 +26,7 @@ const Artist = ({
                   onClick={() => {
                     handleHide(item);
                     setShowData(false);
+                    setSelectedArtistSong("");
                   }}
                   src={item?.images[0]?.url}
                   alt=""

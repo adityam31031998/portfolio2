@@ -1,8 +1,9 @@
 import albumCss from "./album.module.css";
 import albumimgs from "./album.jpeg";
-const Album = ({ album, setSelectedAlbum }) => {
+const Album = ({ album, setSelectedAlbum, setSelectedArtistSong }) => {
   function handleSelected(item) {
     setSelectedAlbum(item);
+    setSelectedArtistSong("");
   }
   return (
     <div className={albumCss.albumContainer}>

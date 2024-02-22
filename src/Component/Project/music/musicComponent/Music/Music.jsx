@@ -56,7 +56,11 @@ const Music = ({
               setSelectedArtist={setSelectedArtist}
               setSelectedArtistSong={setSelectedArtistSong}
             />
-            <Album album={album} setSelectedAlbum={setSelectedAlbum} />
+            <Album
+              album={album}
+              setSelectedAlbum={setSelectedAlbum}
+              setSelectedArtistSong={setSelectedArtistSong}
+            />
           </div>
           <div className={music.musicControl}>
             {console.log(selectedArtistSong)}
