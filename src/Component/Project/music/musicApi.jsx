@@ -70,7 +70,7 @@ const fetchArtistData = async (accessToken, setArtistKey, selectedArtist) => {
   try {
     const authHeader = CreatedMusicAuth(accessToken);
     const artistResponse = await axios.get(selectedArtist?.href, authHeader);
-    console.log(artistResponse.data, "eeeeeee");
+
     setArtistKey(artistResponse.data);
   } catch (error) {
     console.error(

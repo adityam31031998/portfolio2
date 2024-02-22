@@ -18,7 +18,6 @@ const MusicMain = () => {
   const [album, setAlbum] = useState();
   const [audio, setAudio] = useState();
   const [artist, setArtist] = useState();
-  const [selectedArtist, setSelectedArtist] = useState();
 
   useEffect(() => {
     if (!accessToken) {
@@ -44,8 +43,6 @@ const MusicMain = () => {
               setAccessToken={setAccessToken}
               setArtist={setArtist}
               artist={artist}
-              setSelectedArtist={setSelectedArtist}
-              selectedArtist={selectedArtist}
             />
           }
         />
@@ -55,7 +52,7 @@ const MusicMain = () => {
             <Radio apiRadio={apiRadio} setAudio={setAudio} audio={audio} />
           }
         />
-
+        {/* {console.log(selectedArtist)} */}
         <Route path="album" element={<Album />} />
         <Route
           path="SearchSong"

@@ -5,9 +5,16 @@ import play from "./play.png";
 import volumeSpeaker from "./speaker.png";
 import albumimgs from "./album.jpeg";
 
-const AudioPlayer = ({ audio, selectCurentSong, selectedAlbum }) => {
+const AudioPlayer = ({
+  audio,
+  selectCurentSong,
+  selectedAlbum,
+  selectedArtistSong,
+  selectedArtist,
+}) => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [currentTime, setCurrentTime] = useState(0);
+  const [imageSong, setImageSong] = useState(null); // Initialize imageSong state with null
   const [volume, setVolume] = useState(1);
   const audioRef = useRef(null);
   const sliderRef = useRef(null);
@@ -26,9 +33,33 @@ const AudioPlayer = ({ audio, selectCurentSong, selectedAlbum }) => {
     }
   };
 
+  const updateImageSong = () => {
+    // Clear previous value
+    setImageSong(null);
+
+    // Check conditions and set new value
+    if (selectedArtistSong) {
+      setImageSong(selectedArtist?.images[0]?.url);
+    } else if (selectedAlbum) {
+      setImageSong(albumimgs);
+    } else if (audio && audio.votes) {
+      setImageSong(audio.favicon);
+    } else if (audio && audio.total_tracks) {
+      setImageSong(audio.images[0].url?.images[0]?.url);
+    }
+  };
+
+  useEffect(() => {
+    // {
+    //   console.log(selectedArtistSong, "selectedArtistSong");
+    // }
+
+    updateImageSong();
+  }, [audio, selectedAlbum, selectedArtistSong, selectedArtist]);
+
   useEffect(() => {
     const audioElement = audioRef.current;
-    if (!audioElement) return; // Add null check here
+    if (!audioElement) return;
 
     const handleTimeUpdate = () => {
       setCurrentTime(audioElement.currentTime);
@@ -53,62 +84,67 @@ const AudioPlayer = ({ audio, selectCurentSong, selectedAlbum }) => {
   return (
     <div className="audioControl">
       <div className="audioBody">
-        {audio && audio.id ? (
-          <div className="audioImgPlay">
-            <img
-              className="audioImgPlayapi"
-              src={audio.images[0].url}
-              alt="loading"
-            />
-          </div>
-        ) : (
-          <div className="audioImgPlay">
-            <img
-              className="audioImgPlayapi"
-              src={audio ? audio?.favicon : albumimgs}
-              alt="loading"
-            />
-          </div>
-        )}
+        <div className="audioImgPlay">
+          {/* Render imageSong if available */}
+          {imageSong && (
+            <img className="audioImgPlayapi" src={imageSong} alt="loading" />
+          )}
+        </div>
         <div className="seekBar">
-          {selectedAlbum && selectedAlbum?.id ? (
+          {/* {console.log(selectedAlbum, "selectedAlbum")} */}
+          {selectedArtistSong && (
             <>
-              {/* album */}
+              {/* {(selectedAlbum = false)} */}
+              <marquee>
+                <b>Name:</b> {selectedArtistSong.name}
+                <b>Type:</b> {selectedArtistSong.type}
+              </marquee>
+              <audio ref={audioRef} src={selectedArtistSong.preview_url} />
+            </>
+          )}
+          {selectedAlbum && (
+            <>
+              {/* {(selectedArtistSong = false)} */}
               <marquee>
                 <p>
-                  <b>Name:</b> {selectedAlbum?.name} <b>Type:</b>{" "}
-                  {selectedAlbum?.type}
+                  <b>Name:</b> {selectedAlbum.name} <b>Type:</b>{" "}
+                  {selectedAlbum.type}
                 </p>
               </marquee>
-              <audio ref={audioRef} src={selectedAlbum?.preview_url} />
+              <audio ref={audioRef} src={selectedAlbum.preview_url} />
             </>
-          ) : audio?.votes ? (
+          )}
+          {audio && audio?.votes && (
             <>
-              {/* radioApi */}
               <marquee>
                 <p>
-                  <b>Name:</b> {audio?.name} <b>Country:</b> {audio?.country}{" "}
+                  <b>Name:</b> {audio.name} <b>Country:</b> {audio.country}{" "}
                   <b>Language:</b>{" "}
-                  {audio?.language ? audio?.language : "Not found"}
+                  {audio.language ? audio.language : "Not found"}
                 </p>
+                {imageSong && (
+                  <img
+                    className="audioImgPlayapi"
+                    src={imageSong}
+                    alt="loading"
+                  />
+                )}
               </marquee>
-              <audio ref={audioRef} src={audio?.url_resolved} />
+              <audio ref={audioRef} src={audio.url_resolved} />
             </>
-          ) : audio?.total_tracks ? (
+          )}
+          {audio?.total_tracks && (
             <>
-              {/* searchsong */}
               <marquee>
-                <b>name</b>: {audio.name} <b>release_date</b>:{" "}
-                {audio.release_date} <b>album</b>: {audio.album_type}
+                <b>Name:</b> {audio.name} <b>release_date:</b>{" "}
+                {audio.release_date} <b>album:</b> {audio.album_type}
               </marquee>
               <audio ref={audioRef} src={selectCurentSong} />
             </>
-          ) : null}
-
+          )}
           <div className="range">
             <div className="slider" ref={sliderRef}></div>
           </div>
-
           <div className="volumeset">
             <img src={volumeSpeaker} className="speaker" alt="" />
             <input
@@ -124,7 +160,6 @@ const AudioPlayer = ({ audio, selectCurentSong, selectedAlbum }) => {
             />
           </div>
         </div>
-
         <div className="playPause" onClick={togglePlay}>
           <img src={isPlaying ? pause : play} alt="" className="pauseIcon" />
         </div>

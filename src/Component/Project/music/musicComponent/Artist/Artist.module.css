@@ -1,4 +1,4 @@
-.artistContainer {
+.aartistContainer {
   width: 100%;
   height: 40%;
   display: flex;
@@ -6,18 +6,18 @@
   overflow: scroll;
   flex-direction: column;
 }
-.artistSubContainer {
+.aartistSubContainer {
   display: flex;
   flex-wrap: wrap;
   width: 30%;
   height: 100%;
 }
-.artistImg {
+.aartistImg {
   opacity: 10px;
   width: 19.1cap;
   position: relative;
 }
-.artistImgcover {
+.aartistImgcover {
   display: block;
   width: 100%;
   background-color: black;

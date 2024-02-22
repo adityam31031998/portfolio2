@@ -17,9 +17,10 @@ const Music = ({
   accessToken,
   setAccessToken,
   setApiRadio,
-  setSelectedArtist,
-  selectedArtist,
 }) => {
+  const [selectedArtist, setSelectedArtist] = useState(null);
+  const [selectedArtistSong, setSelectedArtistSong] = useState(null);
+
   const [artistKey, setArtistKey] = useState();
   const [selectedAlbum, setSelectedAlbum] = useState();
   useEffect(() => {
@@ -49,16 +50,25 @@ const Music = ({
                 </div>
               </Link>
             </div>
-
             <Artist
               artistKey={artistKey}
               artist={artist}
               setSelectedArtist={setSelectedArtist}
+              setSelectedArtistSong={setSelectedArtistSong}
             />
             <Album album={album} setSelectedAlbum={setSelectedAlbum} />
           </div>
           <div className={music.musicControl}>
-            <AudioPlayer selectedAlbum={selectedAlbum} />
+            {console.log(selectedArtistSong)}
+            {console.log(selectedAlbum)}
+            {selectedArtistSong ? (
+              <AudioPlayer
+                selectedArtistSong={selectedArtistSong}
+                selectedArtist={selectedArtist}
+              />
+            ) : (
+              <AudioPlayer selectedAlbum={selectedAlbum} />
+            )}
           </div>
         </div>
       </div>
