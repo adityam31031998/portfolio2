@@ -1,6 +1,5 @@
-
 @media screen and (max-width: 767px) {
-  .searchBox {
+  .weatherSearchBox {
     width: 80%;
     margin-left: 15%;
     height: 5cap;
@@ -21,14 +20,14 @@
     /* justify-content: flex-start; */
     justify-content: space-between;
   }
-  .searchBox .iconLocation {
+  .weatherSearchBox .iconLocation {
     width: 1.6cap;
     height: 10%;
     margin: 1%;
     margin-left: 2%;
   }
 
-  .searchBox .searchInput {
+  .weatherSearchBox .searchInput {
     width: 85%;
     outline: none;
     border: none;
@@ -42,7 +41,7 @@
     flex-wrap: wrap;
     width: 80%;
   }
-  .searchBox .iconSearch {
+  .weatherSearchBox .iconSearch {
     float: right;
     width: 2.5cap;
     height: auto;
@@ -57,7 +56,7 @@
     flex-wrap: wrap;
     flex-direction: column;
   }
-  .currentDate {
+  .weatherCurrentDate {
     width: 9cap;
     height: 100%;
   }
@@ -84,7 +83,7 @@
     justify-content: space-around;
     text-align: center;
   }
-  .currentDate:hover {
+  .weatherCurrentDate:hover {
     border: 2px solid black;
   }
   .weathericons {
@@ -94,7 +93,7 @@
 
 /* Tablet Styles */
 @media screen and (min-width: 766px) and (max-width: 1023px) {
-  .searchBox {
+  .weatherSearchBox {
     width: 100dvw;
     height: 7cap;
     display: flex;
@@ -110,14 +109,14 @@
     align-items: center;
     justify-content: space-between;
   }
-  .searchBox .iconLocation {
+  .weatherSearchBox .iconLocation {
     width: 3%;
     height: auto;
     margin: 1%;
     margin-left: 2%;
   }
 
-  /* .searchBox .searchInput {
+  /* .weatherSearchBox .searchInput {
     width: 80%;
     outline: none;
     border: none;
@@ -125,7 +124,7 @@
     color: black;
     background: transparent;
   } */
-  .searchBox .searchInput {
+  .weatherSearchBox .searchInput {
     width: 88%;
     outline: none;
     border: none;
@@ -138,7 +137,7 @@
     flex-wrap: wrap;
     width: 80%;
   }
-  .searchBox .iconSearch {
+  .weatherSearchBox .iconSearch {
     float: right;
     width: 2.5cap;
     height: auto;
@@ -153,7 +152,7 @@
     flex-wrap: wrap;
     flex-direction: column;
   }
-  .currentDate {
+  .weatherCurrentDate {
     width: 15%;
     height: 100%;
   }
@@ -180,7 +179,7 @@
     justify-content: space-around;
     text-align: center;
   }
-  .currentDate:hover {
+  .weatherCurrentDate:hover {
     border: 2px solid black;
   }
   .weathericons {
@@ -190,7 +189,7 @@
 
 /* Laptop/Desktop Styles */
 @media screen and (min-width: 1024px) {
-  .searchBox {
+  .weatherSearchBox {
     width: 100%;
     height: 5cap;
     display: flex;
@@ -208,27 +207,26 @@
     align-items: center;
     justify-content: space-between;
   }
-  .searchBox .iconLocation {
+  .weatherSearchBox .iconLocation {
     width: 2cap;
     height: 2cap;
   }
 
-  .searchBox .searchInput {
+  .weatherSearchBox .searchInput {
     width: 88%;
     outline: none;
     border: none;
     font-size: 1.1rem;
-    color:black;
+    color: black;
     background: transparent;
   }
 
-  
   .iconInput {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
   }
-  .searchBox .iconSearch {
+  .weatherSearchBox .iconSearch {
     float: right;
     width: 2.5cap;
     height: auto;
@@ -243,7 +241,7 @@
     flex-wrap: wrap;
     flex-direction: column;
   }
-  .currentDate {
+  .weatherCurrentDate {
     width: 15%;
     height: 100%;
   }
@@ -270,7 +268,7 @@
     justify-content: space-around;
     text-align: center;
   }
-  .currentDate:hover {
+  .weatherCurrentDate:hover {
     border: 2px solid black;
   }
   .weathericons {
