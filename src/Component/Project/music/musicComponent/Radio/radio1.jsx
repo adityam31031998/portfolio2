@@ -23,22 +23,48 @@ const Radio = ({ apiRadio, setAudio, audio }) => {
   const [showData, setShowData] = useState(true);
 
   const [selectedCountryList, setSelectedCountryList] = useState();
-  const totalPages = Math.ceil(apiRadio?.length / itemsPerPage);
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const [searchResultPage, setSearchResultPage] = useState(1);
+  const [countryListPage, setCountryListPage] = useState(1);
+  const [countrySelectedSongPage, setCountrySelectedSongPage] = useState(1);
+
   useEffect(() => {
-    searchRadio(searchInput, setGetSearchResult);
-    radiocountruListApi(setGetCountryList);
-    radioSelectedCounterApi(selectedCountryList, setGetCountrySelectedSong);
-  }, [searchInput, selectedCountryList]);
-  // Filter radio stations with URLs ending in ".mp3" or ".m3u8"
+    searchRadio(searchInput, setGetSearchResult, searchResultPage);
+    radiocountruListApi(setGetCountryList, countryListPage);
+    radioSelectedCounterApi(
+      selectedCountryList,
+      setGetCountrySelectedSong,
+      countrySelectedSongPage
+    );
+  }, [
+    searchInput,
+    selectedCountryList,
+    searchResultPage,
+    countryListPage,
+    countrySelectedSongPage,
+  ]);
+
+  const handleSearchResultPageChange = (page) => {
+    setSearchResultPage(page);
+  };
+
+  const handleCountryListPageChange = (page) => {
+    setCountryListPage(page);
+  };
+
+  const handleCountrySelectedSongPageChange = (page) => {
+    setCountrySelectedSongPage(page);
+  };
+
   const supportedRadioStations = apiRadio?.filter(
     (item) => item.url_resolved.endsWith(".mp3") || item.url_resolved
   );
   const currentItems = supportedRadioStations?.slice(
-    indexOfFirstItem,
-    indexOfLastItem
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
   );
+
+  const totalPages = Math.ceil(supportedRadioStations?.length / itemsPerPage);
+
   const nextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
@@ -131,6 +157,7 @@ const Radio = ({ apiRadio, setAudio, audio }) => {
               </div>
             </div>
             {/* country */}
+            <p>Categoty</p>
             <div className={radioCss.radioAudio}>
               <div className={radioCss.radioList}>
                 <div className={radioCss.radioListSize}>
@@ -191,6 +218,9 @@ const Radio = ({ apiRadio, setAudio, audio }) => {
               </div>
             </div>
             {/* music radio */}
+            <p>
+              <b>Radio</b>
+            </p>
             <div className={radioCss.radioAudio}>
               <div className={radioCss.radioList}>
                 <div className={radioCss.radioListSize}>
@@ -229,18 +259,15 @@ const Radio = ({ apiRadio, setAudio, audio }) => {
                   )}
                 </div>
               </div>
-              <div className={radioCss.pagination}>
-                <button onClick={prevPage} disabled={currentPage === 1}>
-                  Previous
-                </button>
-                <span>{currentPage}</span> / <span>{totalPages}</span>
-                <button
-                  onClick={nextPage}
-                  disabled={currentPage === totalPages}
-                >
-                  Next
-                </button>
-              </div>
+            </div>
+            <div className={radioCss.pagination}>
+              <button onClick={prevPage} disabled={currentPage === 1}>
+                Previous
+              </button>
+              <span>{currentPage}</span> / <span>{totalPages}</span>
+              <button onClick={nextPage} disabled={currentPage === totalPages}>
+                Next
+              </button>
             </div>
           </div>
           <div className={radioCss.musicControl}>
