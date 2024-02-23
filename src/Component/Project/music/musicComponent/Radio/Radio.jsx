@@ -157,6 +157,7 @@ const Radio = ({ apiRadio, setAudio, audio }) => {
               </div>
             </div>
             {/* country */}
+            <p>Categoty</p>
             <div className={radioCss.radioAudio}>
               <div className={radioCss.radioList}>
                 <div className={radioCss.radioListSize}>
@@ -217,6 +218,9 @@ const Radio = ({ apiRadio, setAudio, audio }) => {
               </div>
             </div>
             {/* music radio */}
+            <p>
+              <b>Radio</b>
+            </p>
             <div className={radioCss.radioAudio}>
               <div className={radioCss.radioList}>
                 <div className={radioCss.radioListSize}>
@@ -255,18 +259,15 @@ const Radio = ({ apiRadio, setAudio, audio }) => {
                   )}
                 </div>
               </div>
-              <div className={radioCss.pagination}>
-                <button onClick={prevPage} disabled={currentPage === 1}>
-                  Previous
-                </button>
-                <span>{currentPage}</span> / <span>{totalPages}</span>
-                <button
-                  onClick={nextPage}
-                  disabled={currentPage === totalPages}
-                >
-                  Next
-                </button>
-              </div>
+            </div>
+            <div className={radioCss.pagination}>
+              <button onClick={prevPage} disabled={currentPage === 1}>
+                Previous
+              </button>
+              <span>{currentPage}</span> / <span>{totalPages}</span>
+              <button onClick={nextPage} disabled={currentPage === totalPages}>
+                Next
+              </button>
             </div>
           </div>
           <div className={radioCss.musicControl}>
