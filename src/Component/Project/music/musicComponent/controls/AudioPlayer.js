@@ -127,7 +127,7 @@ const AudioPlayer = ({
             </>
           )}
           <div className="range">
-            <div className="slider" ref={sliderRef}></div>
+            <div className="audioSlider" ref={sliderRef}></div>
           </div>
           <div className="volumeset">
             <img src={volumeSpeaker} className="speaker" alt="" />
