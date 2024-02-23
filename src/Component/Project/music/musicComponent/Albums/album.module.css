@@ -1,0 +1,82 @@
+@media only screen and (max-width: 767px) {
+  .albumContainer {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    flex-direction: column;
+  }
+  .albumSubContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+    margin-left: 3%;
+  }
+  .albumImg {
+    opacity: 10px;
+    width: 19.1cap;
+    position: relative;
+  }
+  .albumImgcover {
+    display: block;
+    width: 100%;
+    background-color: black;
+    filter: opacity(40%);
+  }
+
+  .textOverlay {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    color: white; /* Text color */
+    text-align: center;
+    font-size: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Adjust font size */
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .albumContainer {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    flex-direction: column;
+  }
+  .albumSubContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 100%;
+    margin-left: 3%;
+  }
+  .albumImg {
+    opacity: 10px;
+    width: 19.1cap;
+    position: relative;
+  }
+  .albumImgcover {
+    display: block;
+    width: 100%;
+    background-color: black;
+    filter: opacity(40%);
+  }
+
+  .textOverlay {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    color: white; /* Text color */
+    text-align: center;
+    font-size: 17px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Adjust font size */
+  }
+}

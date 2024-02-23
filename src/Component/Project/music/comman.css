@@ -1,0 +1,23 @@
+.label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+.subIcon {
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  align-content: flex-start;
+}
+.musicCategory {
+  width: 50%;
+  margin: 2%;
+}
+.radioIcon {
+  width: 20%;
+}

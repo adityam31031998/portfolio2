@@ -8,7 +8,6 @@
   justify-content: center;
 }
 
-
 /* Mobile devices (portrait and landscape) */
 @media only screen and (min-width: 168px) and (max-width: 991px) {
   .body {
@@ -19,7 +18,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
   }
 
   .container {
@@ -93,7 +91,6 @@
     height: 55%;
     background-color: #15151e;
     border-radius: 0px 0px 0px 30px;
-
   }
 
   .catsubTitle {
@@ -184,7 +181,7 @@
 
   .headder .searchs {
     width: 100%;
-    background-color: #131219;
+    background-color: transparent;
     /* background-color: #1c1925; */
     height: 50%;
     left: 0;
@@ -193,7 +190,6 @@
     align-items: center;
     align-content: center;
   }
-
 
   .searchs .songSearch {
     width: 90%;
@@ -208,8 +204,6 @@
     font-size: 1rem;
     text-align: center;
   }
-
-
 
   .profile .profiles {
     position: absolute;
@@ -337,7 +331,6 @@
   }
 
   .bottomPlayList .currentControls {
-
     width: 30%;
     height: 100%;
     background-color: rgb(159, 160, 166);
@@ -376,7 +369,6 @@
     flex-direction: column;
   }
 
-
   .searchDetails {
     position: relative;
     width: 100%;
@@ -389,7 +381,6 @@
     z-index: 1;
     overflow: scroll;
     border-radius: 0 0 30px 0;
-
   }
 
   @keyframes searchdetails {
@@ -413,7 +404,7 @@
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-image: url("../../.././../public/song.jpg");
+    background-image: url("/public/song.jpg");
     background-size: 100% 100%;
     /* justify-content: center; */
   }
@@ -427,7 +418,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
   }
 
   .gridRight {
@@ -439,7 +429,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
   }
 
   .gridRightBottom {
@@ -560,7 +549,6 @@
     }
   }
 }
-
 
 @media only screen and (min-width: 992px) and (max-width: 9000px) {
   .toggleButton1 {
@@ -711,13 +699,22 @@
     flex-wrap: wrap;
     position: relative;
     width: 100%;
-    height: 15%;
+    height: 12.5%;
+    margin-top: 3%;
+
     /* background-color: brown; */
+  }
+  .searchSongss {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
   }
 
   .headder .searchs {
     width: 60%;
-    background-color: #121319;
+    background-color: transparent;
     height: 100%;
     left: 0;
     display: flex;
@@ -728,7 +725,7 @@
 
   .searchs input {
     position: relative;
-    background-color: #1b1b25;
+    background-color: #1b1b2572;
     color: white;
   }
 
@@ -742,51 +739,19 @@
   .searchs .songSearch {
     width: 30%;
     left: 5%;
-    height: 30%;
+    height: 3cap;
     position: absolute;
     outline: none;
-    border-radius: 30px;
+    border-radius: 10px;
     border: none;
     font-size: 1rem;
     text-align: center;
-  }
-
-  .headder .profile {
-    right: 0;
-    border-radius: 0px 30px 0 0;
-    background-color: #121319;
-    height: 100%;
-    width: 40%;
-  }
-
-  .profile .profiles {
-    position: absolute;
-    width: 20%;
-    height: 50%;
-    top: 25%;
-    right: 5%;
-    border-radius: 50px;
-    background-color: #1b1b25;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
   }
 
   .subTitle {
     width: 20%;
     height: 10%;
     text-shadow: 0px 0px 2px yellow;
-  }
-
-  .profiles .image {
-    position: absolute;
-    width: 23%;
-    left: 2%;
-    height: auto;
-    border-radius: 50%;
   }
 
   .musicRight .recentPlay {
@@ -862,7 +827,6 @@
   .trandings img:hover {
     /* width: 20%; */
     box-shadow: 0px 0px 4px 2px white;
- 
   }
 
   /* .tranding .trandingImages {
@@ -890,66 +854,10 @@
     background-color: #121319;
   }
 
-  .bottomPlayList .currentControls {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: flex-start;
-    width: 30%;
-    height: 100%;
-    background-color: #121319;
-    position: absolute;
-    left: 35%;
-  }
-
-  .bottomPlayList .volumeControl {
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
-  }
-
-  .bottomPlayList .volume {
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: stretch;
-    right: 0;
-    width: 30%;
-    height: 100%;
-    background-color: #121319;
-    border-radius: 0 0 30px 0;
-  }
-
-  .bottomPlayList .currentPlay {
-    width: 25%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(220, 212, 214);
-  }
-
-  .musicRight .bottomPlayList {
-    position: absolute;
-    box-shadow: 0px 0px 5px 1px wheat;
-    width: 100%;
-    height: 15%;
-    background-color: #121319;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 0 0 30px 0;
-    flex-direction: column;
-  }
-
   .searchDetails {
     position: relative;
     width: 100%;
-    height: 72.3dvh;
+    height: 27.3cap;
     /* background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
     background: linear-gradient(-45deg, #95ada1, #7e8a87, #526b60, #275f44);
@@ -957,7 +865,7 @@
     animation: searchdetails 15s ease infinite;
     z-index: 1;
     overflow: scroll;
-    border-radius: 0 0 30px 0;
+    border-radius: 10px;
   }
 
   @keyframes searchdetails {
@@ -981,7 +889,7 @@
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    background-image: url("../../.././../public/song.jpg");
+    background-image: url("/public/song.jpg");
     background-size: 100% 100%;
     /* justify-content: center; */
   }
@@ -990,7 +898,8 @@
     overflow: scroll;
     position: absolute;
     left: 0;
-    width: 70%;
+    margin-top: 10%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -1011,7 +920,7 @@
   .gridRightBottom {
     background-color: rgba(0, 255, 128, 0.366);
     width: 100%;
-    height: 30%;
+    height: 100%;
     bottom: 0;
     display: flex;
     /* align-items: center; */
@@ -1027,7 +936,7 @@
 
   .searchImages {
     width: 11dvw;
-    height: 100dvh;
+    height: 100%;
     height: auto;
     margin: 10px;
     border-radius: 50%;
