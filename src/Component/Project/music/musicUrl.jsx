@@ -13,6 +13,10 @@ var artistAlbumApiKey =
 var categoriesApi = "https://api.spotify.com/v1/browse/categories";
 var playListApi = "https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n";
 var allRadio = "https://bando-radio-api.p.rapidapi.com/stations";
+var radioSearchUrl = "https://bando-radio-api.p.rapidapi.com/stations/byname/";
+var radioCountryList = "https://bando-radio-api.p.rapidapi.com/countries";
+var radioSelectedCountryApiKey =
+  "https://bando-radio-api.p.rapidapi.com/stations/bycountry/";
 export {
   albumPoint,
   CLIENT_ID,
@@ -22,4 +26,7 @@ export {
   artistAlbumApiKey,
   playListApi,
   allRadio,
+  radioSearchUrl,
+  radioCountryList,
+  radioSelectedCountryApiKey,
 };

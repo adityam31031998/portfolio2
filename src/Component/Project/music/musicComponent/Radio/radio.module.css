@@ -1,7 +1,7 @@
 @media (max-width: 767px) {
   .radioAudio {
     width: 100%;
-    height: 70%;
+    height: 40%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -10,7 +10,7 @@
   .radioList {
     overflow: scroll;
     background-color: rgba(0, 0, 0, 0.432);
-    height: 50%;
+    height: 90%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -29,7 +29,7 @@
   }
 
   .radioBox {
-    width: 20%;
+    width: 40%;
     height: 100%;
     margin-left: 2%;
     display: flex;
@@ -42,7 +42,7 @@
   .radioBox:hover {
     padding: 2%;
 
-    width: 20%;
+    width: 40%;
     height: 100%;
     border: 2px solid white;
     margin-left: 2%;
@@ -237,7 +237,7 @@
 @media (min-width: 1024px) {
   .radioAudio {
     width: 100%;
-    height: 70%;
+    height: 40%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -246,7 +246,7 @@
   .radioList {
     overflow: scroll;
     background-color: rgba(0, 0, 0, 0.432);
-    height: 50%;
+    height: 90%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -353,6 +353,7 @@
   }
 
   .musicCenter {
+    overflow: scroll;
     border-radius: 10px;
     margin-top: 1%;
     display: flex;

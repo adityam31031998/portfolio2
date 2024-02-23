@@ -19,6 +19,7 @@ const Music = ({
 }) => {
   const [selectedArtist, setSelectedArtist] = useState(null);
   const [selectedArtistSong, setSelectedArtistSong] = useState(null);
+  const [selectRadioSearch, setSelectRadioSearch] = useState(null);
 
   const [artistKey, setArtistKey] = useState();
   const [selectedAlbum, setSelectedAlbum] = useState();

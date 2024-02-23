@@ -113,13 +113,6 @@ const AudioPlayer = ({
                   <b>Language:</b>{" "}
                   {audio.language ? audio.language : "Not found"}
                 </p>
-                {imageSong && (
-                  <img
-                    className="audioImgPlayapi"
-                    src={imageSong}
-                    alt="loading"
-                  />
-                )}
               </Marquee>
               <audio ref={audioRef} src={audio.url_resolved} />
             </>

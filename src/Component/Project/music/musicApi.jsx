@@ -7,6 +7,9 @@ import {
   categoriesApi,
   allRadio,
   artistAlbumApiKey,
+  radioSearchUrl,
+  radioCountryList,
+  radioSelectedCountryApiKey,
 } from "./musicUrl";
 function CreatedMusicAuth(accessToken) {
   return {
@@ -26,10 +29,11 @@ function radio() {
     },
     params: {
       offset: "0",
-      limit: "40",
+      limit: "150",
     },
   };
 }
+
 async function generateToken(setAccessToken) {
   try {
     const authParameters = {
@@ -81,12 +85,11 @@ const fetchArtistData = async (accessToken, setArtistKey, selectedArtist) => {
 };
 const fetchRadio = async (setApiRadio) => {
   try {
-    const radioAuth = radio(); // Call the radio function to get authentication data
-    const response = await axios.get(allRadio, radioAuth); // Send a GET request to the allRadio URL with authentication headers
-    setApiRadio(response.data); // Set the state with the fetched data
+    const radioAuth = radio();
+    const response = await axios.get(allRadio, radioAuth);
+    setApiRadio(response.data);
   } catch (error) {
-    // If there's an error during the request or processing
-    console.log(error.message, "dddf"); // Log the error message to the console
+    console.log(error.message, "dddf");
   }
 };
 
@@ -109,15 +112,10 @@ const searchUrlCollect = async (
       var ress = searchSelectdApi.href;
 
       var serachSelectedSongApi = await axios.get(ress, searchHeader);
-      // console.log(serachSelectedSongApi.data.tracks.items[0]);
 
       setSelectCurentSong(
         serachSelectedSongApi?.data?.tracks.items[0].preview_url
       );
-      // console.log(
-      //   serachSelectedSongApi?.data?.tracks?.items[0]?.preview_url,
-      //   "rrrrrrrrrrrr"
-      // );
     }
   } catch (error) {
     console.error("Error collecting search URL:", error.message);
@@ -139,6 +137,35 @@ const categoriesMusic = async (accessToken, setCategoryResponse) => {
   }
 };
 
+const searchRadio = async (searchInput, setGetSearchResult) => {
+  try {
+    const radioSearchApi = radio();
+    const addInput = `${radioSearchUrl}${searchInput}`;
+    const response = await axios.get(addInput, radioSearchApi);
+    setGetSearchResult(response?.data);
+  } catch (error) {
+    console.log(error.message, "error in searchapi");
+  }
+};
+const radiocountruListApi = async (setGetCountryList) => {
+  try {
+    const countryList = radio();
+    const response = await axios.get(radioCountryList, countryList);
+
+    setGetCountryList(response.data);
+  } catch (error) {
+    console.log(error.message, "error in countryList");
+  }
+};
+const radioSelectedCounterApi = async (
+  selectedCountryList,
+  setGetCountrySelectedSong
+) => {
+  const radioApi = radio();
+  const addcountryselected = `${radioSelectedCountryApiKey}${selectedCountryList}`;
+  const selectedRadioApi = await axios.get(addcountryselected, radioApi);
+  setGetCountrySelectedSong(selectedRadioApi.data);
+};
 const artistAlbumFetch = async (accessToken, setArtist) => {
   try {
     const artistHearder = CreatedMusicAuth(accessToken);
@@ -160,4 +187,7 @@ export {
   artistAlbumFetch,
   fetchRadio,
   fetchArtistData,
+  searchRadio,
+  radiocountruListApi,
+  radioSelectedCounterApi,
 };
