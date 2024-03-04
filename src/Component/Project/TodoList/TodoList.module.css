@@ -46,7 +46,7 @@
   font-size: 1.5rem;
   width: 50%;
   height: 10%;
-  font-family: 'Lobster';
+  font-family: "Lobster";
 }
 
 .morning {
@@ -72,6 +72,7 @@
 }
 
 .input {
+  color: #000;
   outline: none;
   border: none; /* Keep only one border property */
   width: 100%; /* Adjust based on design preferences */

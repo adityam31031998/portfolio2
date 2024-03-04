@@ -120,6 +120,7 @@
     justify-content: center;
   }
   .todolistinput {
+    color: #000;
     width: 70%;
     background: none;
     outline: none;
@@ -282,6 +283,7 @@
     justify-content: center;
   }
   .todolistinput {
+    color: #000;
     width: 70%;
     background: none;
     outline: none;
