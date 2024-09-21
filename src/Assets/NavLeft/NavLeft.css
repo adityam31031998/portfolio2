@@ -1,0 +1,40 @@
+.navLeftContainer {
+  color: white;
+  max-width:  80%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items:center ;
+  align-content: center;
+  height: 4%;
+  text-align: start;
+  
+  justify-content: flex-start;
+  margin: 10% auto;
+  border-radius: 10px;
+  /* background-color: 	#353839; */
+  /* box-shadow: 0px 0px 2px 1px white; */
+}
+a{
+  font-size: 3vh;
+}
+.icon1{
+  margin-right: 5%;
+  width: 30%;
+}
+.navLeftContainer:hover {
+  color: yellow;
+  max-width:  80%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  align-items:center ;
+  align-content: center;
+  height: 4%;
+  text-align: start;
+  
+  justify-content: flex-start;
+  margin: 10% auto;
+  border-radius: 10px;
+}
+

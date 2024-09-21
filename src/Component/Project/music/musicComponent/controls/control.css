@@ -1,0 +1,365 @@
+/* CSS for mobile devices */
+@media only screen and (max-width: 600px) {
+  .audioControl {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+  }
+  .audioBody {
+    display: flex;
+    flex-wrap: wrap;
+    background: #000;
+    width: 100%;
+    height: 70%;
+    border-radius: 8px;
+    justify-content: space-between;
+  }
+
+  .audioImgPlay {
+    margin-left: 2%;
+    margin-top: -5%;
+    width: 4cap;
+    height: 4cap;
+    border-radius: 10px;
+    background: wheat;
+    box-shadow: 0 0 3px 2px white;
+  }
+  .audioImgPlayapi {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .seekBar {
+    width: 60%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
+  .seekBarTrack:hover {
+    opacity: 1;
+  }
+  .seekBarTrack {
+    margin-bottom: 2%;
+    width: 50%;
+    height: 15px;
+    background: #d3d3d3;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  .volume {
+    margin-bottom: 2%;
+
+    width: 40%;
+  }
+  .pauseIcon {
+    margin: auto 0px;
+    width: 3cap;
+    height: 3cap;
+  }
+
+  .playPause {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -5%;
+    width: 4cap;
+    height: 4cap;
+    background: white;
+    border-radius: 100%;
+  }
+
+  .range {
+    height: 10px;
+    width: 100%;
+    border: 1px solid rgb(228, 208, 208);
+  }
+  .audioslider {
+    height: 8px;
+    width: 0;
+    background-image: linear-gradient(
+      to right top,
+      #051937,
+      #004d7a,
+      #008793,
+      #00bf72,
+      #a8eb12
+    );
+    box-shadow: 0 0 2px 1px whitesmoke;
+    background-color: rgb(177, 28, 28);
+  }
+  .volumeset {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+  }
+  .speaker {
+    width: 8%;
+  }
+  .volumeRange {
+    width: 40%;
+    margin-left: 5%;
+  }
+
+  .searchs {
+    margin: 2%;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background-color: #1b1b2572;
+  }
+  .songSearch {
+    width: 85%;
+    /* background-color: #1c1925; */
+    /* color: white;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    text-align: center; */
+
+    display: flex;
+    flex-wrap: wrap;
+    height: 3cap;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    background: transparent;
+
+    text-align: center;
+  }
+  .searchs input {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+  }
+  .searchIcon {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px;
+    z-index: 1;
+    width: 2cap;
+    height: 2cap;
+  }
+
+  .musicControl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    /* background-color: rgba(255, 228, 196, 0.377); */
+    width: 90%;
+    height: 20%;
+  }
+
+  .searchSongss {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+  }
+}
+
+/* CSS for tablet devices */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Your CSS rules for tablet devices */
+}
+
+/* CSS for laptop/desktop devices */
+@media only screen and (min-width: 1025px) {
+  /* Your CSS rules for laptop/desktop devices */
+  .audioControl {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+  }
+  .audioBody {
+    display: flex;
+    flex-wrap: wrap;
+    background: #000;
+    width: 100%;
+    height: 70%;
+    border-radius: 8px;
+    justify-content: space-between;
+  }
+
+  .audioImgPlay {
+    margin-left: 2%;
+    margin-top: -5%;
+    width: 6cap;
+    height: 6cap;
+    border-radius: 10px;
+    background: wheat;
+    box-shadow: 0 0 3px 2px white;
+  }
+  .audioImgPlayapi {
+    width: 6cap;
+    height: 6cap;
+    border-radius: 10px;
+  }
+  .seekBar {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
+  .seekBarTrack:hover {
+    opacity: 1;
+  }
+  .seekBarTrack {
+    margin-bottom: 2%;
+    width: 50%;
+    height: 15px;
+    background: #d3d3d3;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  .volume {
+    margin-bottom: 2%;
+
+    width: 40%;
+  }
+  .pauseIcon {
+    margin: auto 0px;
+    width: 50%;
+    height: 50%;
+  }
+
+  .playPause {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -5%;
+    width: 5cap;
+    height: 5cap;
+    background: white;
+    border-radius: 100%;
+  }
+
+  .range {
+    height: 10px;
+    width: 100%;
+    border: 1px solid rgb(228, 208, 208);
+  }
+  .audioslider {
+    height: 8px;
+    width: 0;
+    background-image: linear-gradient(
+      to right top,
+      #051937,
+      #004d7a,
+      #008793,
+      #00bf72,
+      #a8eb12
+    );
+    box-shadow: 0 0 2px 1px whitesmoke;
+    background-color: rgb(177, 28, 28);
+  }
+  .volumeset {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+  }
+  .speaker {
+    width: 5%;
+  }
+  .volumeRange {
+    width: 40%;
+    margin-left: 5%;
+  }
+
+  .searchs {
+    margin: 2%;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background-color: #1b1b2572;
+  }
+  .songSearch {
+    width: 85%;
+    /* background-color: #1c1925; */
+    /* color: white;
+    height: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    text-align: center; */
+
+    display: flex;
+    flex-wrap: wrap;
+    height: 3cap;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    background: transparent;
+
+    text-align: center;
+  }
+  .searchs input {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+  }
+  .searchIcon {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px;
+    z-index: 1;
+    width: 2cap;
+    height: 2cap;
+  }
+
+  .musicControl {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 10px;
+    /* background-color: rgba(255, 228, 196, 0.377); */
+    width: 90%;
+    height: 20%;
+  }
+
+  .searchSongss {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 10%;
+  }
+}

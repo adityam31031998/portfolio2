@@ -1,0 +1,618 @@
+@media only screen and (max-width: 600px) {
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+  }
+  .mainLeft {
+    width: 100%;
+    height: 50%;
+  }
+  .mainRight {
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+  }
+  .work {
+    height: 50%;
+    width: auto;
+  }
+  .background-image {
+    margin-right: 5%;
+    width: auto;
+    height: 75%;
+  }
+  .home {
+    background-color: white;
+    width: 100dvw;
+    height: 100dvh;
+  }
+
+  .home {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slider {
+    background-image: url("../peak.jpg");
+
+    position: relative;
+    height: 400px;
+    display: flex;
+    /* background-color: #293132; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    animation: slideColor 10s forwards infinite;
+  }
+
+  .caption {
+    position: absolute;
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+    /* top: 50%; */
+    transform: translateY(-50%);
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    margin-left: -67%;
+  }
+
+  .text-box {
+    display: inline-block;
+    position: relative;
+  }
+
+  .text-box div {
+    display: inline-block;
+    position: absolute;
+    width: 300px;
+    margin-top: 35px;
+    transform: rotateX(-90deg);
+    opacity: 0;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    animation-timing-function: ease;
+  }
+
+  .text-box div:nth-child(1) {
+    animation: rollDown 10s forwards infinite;
+  }
+
+  .text-box div:nth-child(2) {
+    animation: rollDown2 10s forwards infinite;
+  }
+
+  .text-box div:nth-child(3) {
+    animation: rollDown3 10s forwards infinite;
+  }
+
+  @keyframes rollDown {
+    0% {
+      top: -200px;
+      transform: rotateX(-90deg);
+    }
+
+    11% {
+      top: -74px;
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+    22% {
+      top: -74px;
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+    33% {
+      top: 50px;
+      transform: rotateX(30deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes rollDown2 {
+    33% {
+      top: -200px;
+      transform: rotateX(-90deg);
+    }
+
+    44% {
+      top: -74px;
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+    55% {
+      top: -74px;
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+    60% {
+      top: 50px;
+      transform: rotateX(30deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes rollDown3 {
+    66% {
+      top: -200px;
+      transform: rotateX(-90deg);
+    }
+
+    77% {
+      top: -74px;
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+    88% {
+      top: -74px;
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+    99% {
+      top: 50px;
+      transform: rotateX(30deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideColor {
+    0% {
+      background-color: #387780;
+    }
+
+    33% {
+      background-color: #3f88c5;
+    }
+
+    100% {
+      background-color: #387780;
+    }
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .carousel-container {
+    overflow: hidden;
+    width: 100%;
+    bottom: 10%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    width: 100%;
+    animation: scroll 8s linear infinite;
+  }
+
+  .carousel-slide {
+    min-width: 80%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    20% {
+      transform: translateX(-100%);
+    }
+
+    40% {
+      transform: translateX(-200%);
+    }
+
+    60% {
+      transform: translateX(-300%);
+    }
+
+    80% {
+      transform: translateX(-400%);
+    }
+
+    100% {
+      transform: translateX(-400%);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .image-container {
+    position: relative;
+  }
+
+  .overlay-image {
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .overlay-image1 {
+    position: absolute;
+    width: 30%;
+    right: 0;
+  }
+
+  .type-wrap {
+    overflow: hidden;
+    color: black;
+    user-select: none;
+    font-size: 50px;
+    padding: 20px;
+    width: 100%;
+    height: 150px;
+  }
+
+  /* the above is for styling puposes only */
+
+  .typed-cursor {
+    opacity: 1;
+    user-select: none;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .container {
+    margin-right: 0px;
+  }
+
+  hr {
+    /* border-color: white; */
+    width: 70%;
+    margin: 0px auto;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .wal {
+    position: absolute;
+    bottom: 0%;
+    width: 100dvw;
+    right: 0;
+  }
+
+  .home {
+    /* background-color: white; */
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../public/bg5-Photoroom.png");
+    background-size: cover;
+    /* You can use 'cover', 'contain', or specific dimensions */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+  }
+
+  .slider {
+    /* background-image: url("../../../public/bg.png"); */
+    /* background-image: url("../pexels-cafepolverini-15034880.jpg"); */
+    position: relative;
+    height: 600px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    animation: slideColor 10s forwards infinite;
+  }
+
+  .caption {
+    position: absolute;
+    /* line-height: 100px; */
+    font-size: 60px;
+    color: #fff;
+    position: relative;
+    /* top: 50%; */
+    transform: translateY(-50%);
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    margin-left: -17%;
+  }
+
+  .text-box {
+    display: inline-block;
+    position: relative;
+  }
+
+  .text-box div {
+    display: inline-block;
+    position: absolute;
+    width: 400px;
+    margin-top: 10px;
+    transform: rotateX(-90deg);
+    opacity: 0;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    animation-timing-function: ease;
+  }
+
+  .text-box div:nth-child(1) {
+    animation: rollDown 8s forwards infinite;
+  }
+
+  .text-box div:nth-child(2) {
+    animation: rollDown2 8s forwards infinite;
+  }
+
+  .text-box div:nth-child(3) {
+    animation: rollDown3 8s forwards infinite;
+  }
+
+  @keyframes rollDown {
+    0% {
+      top: -200px;
+      transform: rotateX(-90deg);
+    }
+
+    11% {
+      top: -74px;
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+    22% {
+      top: -74px;
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+    33% {
+      top: 50px;
+      transform: rotateX(30deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes rollDown2 {
+    33% {
+      top: -200px;
+      transform: rotateX(-90deg);
+    }
+
+    44% {
+      top: -74px;
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+    55% {
+      top: -74px;
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+    60% {
+      top: 50px;
+      transform: rotateX(30deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes rollDown3 {
+    66% {
+      top: -200px;
+      transform: rotateX(-90deg);
+    }
+
+    77% {
+      top: -74px;
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+    88% {
+      top: -74px;
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+
+    99% {
+      top: 50px;
+      transform: rotateX(30deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideColor {
+    0% {
+      /* background-color: #387780; */
+    }
+
+    33% {
+      /* background-color: #3f88c5; */
+    }
+
+    100% {
+      /* background-color: #387780; */
+    }
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .carousel-container {
+    overflow: hidden;
+    width: 50%;
+    bottom: 5%;
+    right: 5dvw;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    width: 200%;
+    animation: scroll 9s linear infinite;
+  }
+
+  .carousel-slide {
+    min-width: 80%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    20% {
+      transform: translateX(-100%);
+    }
+
+    40% {
+      transform: translateX(-200%);
+    }
+
+    60% {
+      transform: translateX(-300%);
+    }
+
+    80% {
+      transform: translateX(-400%);
+    }
+
+    100% {
+      transform: translateX(-400%);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .image-container {
+    position: relative;
+  }
+
+  .overlay-image {
+    position: absolute;
+    width: 30dvw;
+    bottom: 0%;
+    /* z-index: 1; */
+    right: 0%;
+  }
+
+  .overlay-image1 {
+    position: absolute;
+    width: 10%;
+    bottom: 25%;
+    right: 25%;
+  }
+
+  .type-wrap {
+    overflow: hidden;
+    color: black;
+    user-select: none;
+    font-size: 50px;
+    padding: 20px;
+    width: 100%;
+    height: 150px;
+  }
+
+  /* the above is for styling puposes only */
+
+  .typed-cursor {
+    opacity: 1;
+    user-select: none;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  hr {
+    /* border-color: white; */
+    width: 70%;
+    margin: 0px auto;
+  }
+
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+  .mainLeft {
+    width: 60%;
+    height: 100%;
+  }
+  .mainRight {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    height: 100%;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .work {
+    display: none;
+    height: 20%;
+    width: auto;
+  }
+  .background-image {
+    margin-right: 5%;
+    width: auto;
+    height: 50%;
+  }
+}

@@ -1,0 +1,144 @@
+// import React, { useEffect, useState } from "react";
+import "./style1.css";
+import "soft-ui-library/dist/css/neumorphism-ui.css";
+import Menu from "./Menu";
+import axios from "axios";
+
+
+const App = () => {
+  // let [search,setSearch]=useState("")
+  // const apis={
+  //   key:"1767f9899da1976f074b5eda6b2a5171",
+  //   base:"https://api.openweathermap.org/data/2.5/"
+  // }
+  // useEffect(()=>{
+  //   axios.get( `${apis.base}weather?q=${search}&appid=${apis.key}&units=metric`)
+  //   .then(response=>{console.log(response.data)})
+  //   .catch(error=>{
+  //     console.log("Error",error.message)
+  //   })
+  // })
+  return (
+    <div className="body1">
+      <div className="container1">
+        <div className="navbar">
+          <div className="navleft">
+            <div className="items">
+              {/* <div className=""> */}
+              {/* <input value={search} onChange={e=>setSearch(e.target.value)}/> */}
+                <Menu menuImg={"./home3.png"} menuText={"Home"} />
+                <Menu menuImg={"./home3.png"} menuText={"Home"} />
+                <Menu menuImg={"./home3.png"} menuText={"Home"} />
+                <Menu menuImg={"./home3.png"} menuText={"Home"} />
+                <Menu menuImg={"./home3.png"} menuText={"Home"} />
+              {/* </div> */}
+            </div>
+          </div>
+          <div className="navright"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
+
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.body1 {
+  background-color: #FFD099;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+}
+
+.container1 {
+  position: relative;
+  background-color: #FF6C22;
+  width: 80vw;
+  height: 90vh;
+  box-shadow: 0px 0px 5px 1px black;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  /* background: rgba(165, 79, 29, 0.6); */
+  /* box-shadow: inset 0px 0px 12px rgba(165, 79, 29, 0.6), inset 0px 0px 10px rgba(165, 79, 29, 0.6), 0px 0px 10px 0px rgba(165, 79, 29, 0.6); */
+}
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* background-color: black; */
+  /* box-shadow: 0px 0px 5px 1px black; */
+}
+
+.navleft {
+  width: 20%;
+  height: 100%;
+  /* background-color: tomato; */
+  box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.6), inset 0px 0px 10px rgba(0, 0, 0, 0.6), 0px 0px 0px 0px rgba(0, 0, 0, 0.6);
+  border-radius: 30px 0px 0px 30px;
+}
+
+.navright {
+  width: 40%;
+  height: 100%;
+}
+
+.items {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  /* box-shadow: inset 0px 0px 12px rgba(253, 253, 253, 0.6), inset 0px 0px 10px rgba(255, 255, 255, 0.6), 0px 0px 10px 0px rgba(255, 255, 255, 0.6); */
+  /* box-shadow: inset 0px 0px 12px rgba(165, 79, 29, 0.6), inset 0px 0px 10px rgba(165, 79, 29, 0.6), 0px 0px 10px 0px rgba(165, 79, 29, 0.6); */
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 30px 0px 0px 30px;
+}
+
+.menus {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  width: 70%;
+  height: 10%;
+  border-radius: 10px;
+  background-color: #FF9209;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.icons3 {
+  width: 40%;
+  margin: auto;
+  height: 60%;
+  color: #FFD099;
+}
+
+.iconText {
+  color: #FFD099;
+  font-size: xx-large;
+  width: 30%;
+  height: 90%;
+  padding: 10px;
+}

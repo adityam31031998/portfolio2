@@ -1,0 +1,142 @@
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not resolve all files for configuration ':jars:custom-dev:compileClasspath'.
+> Could not resolve clari5.clari5-api:clari5-api:jdk11-SNAPSHOT.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:iso8583-core:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:risk:jdk11-4.9.5.3-SP1
+   > Could not resolve clari5.clari5-api:clari5-api:jdk11-SNAPSHOT.
+      > Unable to load Maven meta-data from https://nexusrepo.customerxps.com/repository/maven-public/clari5/clari5-api/clari5-api/jdk11-SNAPSHOT/maven-metadata.xml.
+         > Could not get resource 'https://nexusrepo.customerxps.com/repository/maven-public/clari5/clari5-api/clari5-api/jdk11-SNAPSHOT/maven-metadata.xml'.
+            > Could not GET 'https://nexusrepo.customerxps.com/repository/maven-public/clari5/clari5-api/clari5-api/jdk11-SNAPSHOT/maven-metadata.xml'. Received status code 504 from server: Gateway Time-out
+> Could not resolve clari5.base-shared:trace:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:iso8583-core:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:sat-core:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:noesis-core:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:rbi-report:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:df:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:ace:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:rde:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.platform:time:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:iso8583-core:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.platform:rdbms:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:risk:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.base-shared:config:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:sat-core:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:ace:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.platform:dbcp:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:sat-core:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.platform:aef:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.platform:cxutil:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:sat-core:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.platform:rdbms:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:cms:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:risk:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:rbi-report:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.platform:applayer:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.platform:jira:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:df:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:ace:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:rde:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.base-shared:rice:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:jiraclient:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:rde:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.base-shared:hfdb:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:commons:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:noesis-core:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:risk:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:rbi-report:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:fr-core:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:ace:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.platform:tas:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:noesis-core:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.base-shared:wl:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:risk:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:ace:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.tools:codegen-core:jdk11-2022.06.21.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.base-shared:risk:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.utils:cx-base-pure-java:jdk11-2022.08.26.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.utils:cx-json:jdk11-2022.08.26
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.utils:cx-logging:jdk11-2022.08.26
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.utils:utils-core:jdk11-2022.08.26
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:fr-core:jdk11-4.9.5.3-SP1
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.genesis:uaclib:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.utils:cx-dev-tools:jdk11-2022.08.26.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:cmssync:jdk11-4.9.5.3-SP1 > clari5.utils:cx-logging:jdk11-2022.08.26
+   > Skipped due to earlier error
+> Could not resolve clari5.platform:http:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:fr-core:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.base-shared:utils:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:rde:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.genesis:cc:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.genesis:uaclib:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.genesis:audit:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.genesis:uaclib:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.genesis:cc-capability:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.genesis:uaclib:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.reports:xlsx-util:jdk11-2022.03.24.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.genesis:uaclib:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve clari5.mq:cmq-helpers:jdk11-4.9.5.3-SP1.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.mq:cmq-writer:jdk11-4.9.5.3-SP1
+   > Skipped due to earlier error
+> Could not resolve org.apache.commons:commons-text:1.6.
+  Required by:
+      project :jars:custom-dev > clari5.base-shared:rda-core:jdk11-4.9.5.3-SP1 > clari5.base-shared:ace:jdk11-4.9.5.3-SP1 > com.prowidesoftware:pw-swift-core:SRU2020-9.1.4
+   > Skipped due to earlier error
+   > Could not resolve org.apache.commons:commons-text:1.6.
+      > Could not parse POM https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.6/commons-text-1.6.pom
+         > Could not download commons-parent.pom (org.apache.commons:commons-parent:47): Skipped due to earlier error
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1m 12s
+1 actionable task: 1 executed
+
+-----------------------
+  ERROR: BUILD FAILED
+-----------------------
+Full Build Failed
+
+
