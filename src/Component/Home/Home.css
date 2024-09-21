@@ -1,11 +1,35 @@
 @media only screen and (max-width: 600px) {
-  .work {
-    position: absolute;
-    width: 40vw;
-    bottom: 0px;
-    right: 0;
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
   }
-
+  .mainLeft {
+    width: 100%;
+    height: 50%;
+  }
+  .mainRight {
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 50%;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+  }
+  .work {
+    height: 50%;
+    width: auto;
+  }
+  .background-image {
+    margin-right: 5%;
+    width: auto;
+    height: 75%;
+  }
   .home {
     background-color: white;
     width: 100dvw;
@@ -19,10 +43,12 @@
   }
 
   .slider {
+    background-image: url("../peak.jpg");
+
     position: relative;
     height: 400px;
     display: flex;
-    background-color: #293132;
+    /* background-color: #293132; */
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -176,8 +202,8 @@
 
   .carousel-wrapper {
     display: flex;
-    width: 40%;
-    animation: scroll 20s linear infinite;
+    width: 100%;
+    animation: scroll 8s linear infinite;
   }
 
   .carousel-slide {
@@ -221,11 +247,6 @@
     position: relative;
   }
 
-  .background-image {
-    position: relative;
-    width: 60%;
-  }
-
   .overlay-image {
     width: 40%;
     position: absolute;
@@ -235,7 +256,7 @@
 
   .overlay-image1 {
     position: absolute;
-    width: 40%;
+    width: 30%;
     right: 0;
   }
 
@@ -285,14 +306,6 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .work {
-    position: absolute;
-    width: 30vh;
-    left: 200px;
-    bottom: 0px;
-    z-index: 1;
-  }
-
   .wal {
     position: absolute;
     bottom: 0%;
@@ -304,7 +317,7 @@
     /* background-color: white; */
     width: 100%;
     height: 100%;
-    background-image: url("../../../public/bg5.png");
+    background-image: url("../../../public/bg5-Photoroom.png");
     background-size: cover;
     /* You can use 'cover', 'contain', or specific dimensions */
     background-size: 100% 100%;
@@ -314,6 +327,7 @@
 
   .slider {
     /* background-image: url("../../../public/bg.png"); */
+    /* background-image: url("../pexels-cafepolverini-15034880.jpg"); */
     position: relative;
     height: 600px;
     display: flex;
@@ -353,15 +367,15 @@
   }
 
   .text-box div:nth-child(1) {
-    animation: rollDown 10s forwards infinite;
+    animation: rollDown 8s forwards infinite;
   }
 
   .text-box div:nth-child(2) {
-    animation: rollDown2 10s forwards infinite;
+    animation: rollDown2 8s forwards infinite;
   }
 
   .text-box div:nth-child(3) {
-    animation: rollDown3 10s forwards infinite;
+    animation: rollDown3 8s forwards infinite;
   }
 
   @keyframes rollDown {
@@ -472,8 +486,8 @@
 
   .carousel-wrapper {
     display: flex;
-    width: 40%;
-    animation: scroll 20s linear infinite;
+    width: 200%;
+    animation: scroll 9s linear infinite;
   }
 
   .carousel-slide {
@@ -515,12 +529,6 @@
 
   .image-container {
     position: relative;
-  }
-
-  .background-image {
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
   }
 
   .overlay-image {
@@ -577,120 +585,34 @@
     width: 70%;
     margin: 0px auto;
   }
-}
 
-[class*="col-"] {
-  width: 100%;
-}
-
-[class*="col-"] {
-  float: left;
-  /* padding: 15px; */
-}
-
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {
-    width: 8.33%;
-  }
-
-  .col-s-2 {
-    width: 16.66%;
-  }
-
-  .col-s-3 {
-    width: 25%;
-  }
-
-  .col-s-4 {
-    width: 33.33%;
-  }
-
-  .col-s-5 {
-    width: 41.66%;
-  }
-
-  .col-s-6 {
-    width: 50%;
-  }
-
-  .col-s-7 {
-    width: 58.33%;
-  }
-
-  .col-s-8 {
-    width: 66.66%;
-  }
-
-  .col-s-9 {
-    width: 75%;
-  }
-
-  .col-s-10 {
-    width: 83.33%;
-  }
-
-  .col-s-11 {
-    width: 91.66%;
-  }
-
-  .col-s-12 {
+  .main {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    height: 100%;
   }
-}
-
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {
-    width: 8.33%;
+  .mainLeft {
+    width: 60%;
+    height: 100%;
   }
-
-  .col-2 {
-    width: 16.66%;
+  .mainRight {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    height: 100%;
+    align-content: flex-end;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
-
-  .col-3 {
-    width: 25%;
+  .work {
+    display: none;
+    height: 20%;
+    width: auto;
   }
-
-  .col-4 {
-    width: 33.33%;
-  }
-
-  .col-5 {
-    width: 41.66%;
-  }
-
-  .col-6 {
-    width: 50%;
-  }
-
-  .col-7 {
-    width: 58.33%;
-  }
-
-  .col-8 {
-    width: 66.66%;
-  }
-
-  .col-9 {
-    width: 75%;
-  }
-
-  .col-10 {
-    width: 83.33%;
-  }
-
-  .col-11 {
-    width: 91.66%;
-  }
-
-  .col-12 {
-    width: 100%;
-  }
-
-  .colh-12 {
-    width: 100%;
-    height: 30vh;
+  .background-image {
+    margin-right: 5%;
+    width: auto;
+    height: 50%;
   }
 }
